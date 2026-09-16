@@ -1,0 +1,72 @@
+---
+interface Props {
+  currentPath?: string;
+}
+const { currentPath = '/' } = Astro.props;
+---
+
+<nav class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/40 pb-safe transition-all">
+  <div class="h-16 px-margin flex items-center justify-around">
+    <!-- 1. Inicio -->
+    <a
+      href="/"
+      class={`flex flex-col items-center justify-center gap-1 min-w-[60px] py-1 transition-colors ${currentPath === '/' ? 'text-primary font-semibold' : 'text-on-surface-variant hover:text-primary'}`}
+    >
+      <span class="material-symbols-outlined text-[24px]">home</span>
+      <span class="font-label-caps text-[10px] tracking-wider uppercase">Inicio</span>
+    </a>
+
+    <!-- 2. Catálogo -->
+    <a
+      href="/catalogo"
+      class={`flex flex-col items-center justify-center gap-1 min-w-[60px] py-1 transition-colors ${currentPath === '/catalogo' ? 'text-primary font-semibold' : 'text-on-surface-variant hover:text-primary'}`}
+    >
+      <span class="material-symbols-outlined text-[24px]">grid_view</span>
+      <span class="font-label-caps text-[10px] tracking-wider uppercase">Colección</span>
+    </a>
+
+    <!-- 3. Guardados -->
+    <button
+      type="button"
+      id="wishlist-nav-btn"
+      class="flex flex-col items-center justify-center gap-1 min-w-[60px] py-1 text-on-surface-variant hover:text-primary transition-colors"
+      aria-label="Ver Guardados"
+    >
+      <span class="material-symbols-outlined text-[24px]">favorite</span>
+      <span class="font-label-caps text-[10px] tracking-wider uppercase">Deseos</span>
+    </button>
+
+    <!-- 4. Bolsa / Carrito -->
+    <a
+      href="/carrito"
+      class={`relative flex flex-col items-center justify-center gap-1 min-w-[60px] py-1 transition-colors ${currentPath === '/carrito' ? 'text-primary font-semibold' : 'text-on-surface-variant hover:text-primary'}`}
+    >
+      <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+      <span class="font-label-caps text-[10px] tracking-wider uppercase">Bolsa</span>
+      <span
+        id="bottom-cart-badge"
+        class="absolute top-1 right-2 min-w-[16px] h-[16px] px-1 rounded-full bg-secondary text-on-secondary font-label-caps text-[9px] font-bold flex items-center justify-center ring-2 ring-surface"
+      >
+        1
+      </span>
+    </a>
+  </div>
+</nav>
+
+<script>
+  import { getStoredCart, getCartTotals } from '../stores/cart';
+
+  function updateBottomBadge() {
+    const badge = document.getElementById('bottom-cart-badge');
+    if (!badge) return;
+    const items = getStoredCart();
+    const { count } = getCartTotals(items);
+    badge.textContent = String(count);
+    badge.style.display = count > 0 ? 'flex' : 'none';
+  }
+
+  updateBottomBadge();
+  window.addEventListener('atelier:cart-updated', updateBottomBadge);
+  document.addEventListener('astro:page-load', updateBottomBadge);
+</script>
+

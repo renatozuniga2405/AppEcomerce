@@ -1,0 +1,78 @@
+---
+import type { Product } from '../data/products';
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+---
+
+<article class="flex flex-col w-full group relative">
+  <!-- Image Container with Aspect 3:4 -->
+  <a
+    href={`/producto/${product.id}`}
+    class="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-surface-container shadow-sm mb-space-xs block focus:outline-none focus:ring-2 focus:ring-primary/40"
+    aria-label={`Ver detalles de ${product.name}`}
+  >
+    <img
+      src={product.images[0]}
+      alt={product.name}
+      loading="lazy"
+      class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+    />
+
+    <!-- Status Badge -->
+    {product.tag && (
+      <span class="absolute top-2.5 left-2.5 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded text-on-surface font-label-caps text-[9px] uppercase tracking-wider font-semibold shadow-xs">
+        {product.tag}
+      </span>
+    )}
+
+    <!-- Wishlist Button -->
+    <button
+      type="button"
+      aria-label="Añadir a lista de deseos"
+      onclick="event.preventDefault(); event.stopPropagation(); this.querySelector('.heart-icon').classList.toggle('fill-secondary'); this.querySelector('.heart-icon').classList.toggle('text-secondary');"
+      class="heart-btn absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary transition-all shadow-sm active:scale-90"
+    >
+      <span class="heart-icon material-symbols-outlined text-[18px] transition-colors">favorite</span>
+    </button>
+  </a>
+
+  <!-- Metadata -->
+  <div class="flex flex-col min-w-0">
+    <span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant mb-0.5">
+      {product.brand}
+    </span>
+    <a href={`/producto/${product.id}`} class="hover:underline focus:outline-none">
+      <h4 class="font-title-md text-title-md text-on-surface truncate font-medium">
+        {product.name}
+      </h4>
+    </a>
+
+    <!-- Price Section -->
+    <div class="flex items-center gap-space-xs mt-1">
+      <span class="font-label-md text-label-md text-on-surface font-semibold">
+        {product.price} €
+      </span>
+      {product.originalPrice && (
+        <span class="font-label-md text-label-md text-on-surface-variant/70 line-through text-[11px]">
+          {product.originalPrice} €
+        </span>
+      )}
+      {product.originalPrice && (
+        <span class="font-label-caps text-[10px] text-secondary font-bold uppercase tracking-wider">
+          -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
+        </span>
+      )}
+    </div>
+  </div>
+</article>
+
+<style>
+  .fill-secondary {
+    font-variation-settings: 'FILL' 1;
+  }
+</style>
+

@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { PRODUCTS, CATEGORIES } from '../data/products';
+
+const featuredProducts = PRODUCTS.filter(p => p.featured);
+const categoriesWithImages = [
+  {
+    name: 'Novedades',
+    url: '/catalogo?cat=Novedades',
+    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAylxo5u0GeU5lT_WmU4ndzW0oixNg-QqosRHhwmXTt30z2yOyO1VGVfqn5Etz73VIOdGrYXGp1a9OxgWZenTck5ynDvc-rWtW0KgmNZTbHpgaEcPzBDJAVozEx0F3MjCHCzySKUTe2uVSaBlbpIAY5r6A4bna1MMz-Utx_o6RADRQ_tlslwR7CUsMw7NSlqshOnMhctz4IKIRsnoYz1Pvvqk5yC7Ckdq-0SfL-XzAAUPrTXkO_lVne'
+  },
+  {
+    name: 'Sastrería',
+    url: '/catalogo?cat=Sastrería',
+    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC5-KRAcVb1hnXq5bAJ5eIO3RXVaLY-An5-7KN_xF8gBzlsj9A294ZmMYm4xAHvuVBciJxV0jFnZELkp1FJzR-MT7mlgWqQ3v5ipYOedaCUYraLZsK7E1foL0Aa9dTlaD3Gs4mXmfYOnAKxHXolTu78WCkrxzZYw0qeXJ93EeOxHZuOy2DT5l1fWAR5Hv8YMwCrN_839PVBQd0rWIwVfOjd0z7wZ3JpfyPl-nT1V2VfPHi1089pR40O'
+  },
+  {
+    name: 'Lino & Seda',
+    url: '/catalogo?cat=Lino%20%26%20Seda',
+    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBH_ghvrLniIFgiKu00cwlgef2t4LQ3HUXp8LAnFr7DQiGlrn_2Un4-D__RrI_JlmmHxO_9Yx2-S5FRpMPUCVFbVoOuNIqINJ0qbGyav1VAHIg1ukeQMzKUAOVu1BnME8UL1FyQ2odr_PCZ5PkuhWtvIY0CRLvs2eiiiZ_fmzejhomzZVaZQ7OuP0htvCysQtwCKfI5xoIIcEtrXyyLqeWlvb_lV43MhLLijFriKGeD9GBTBiFYDC_Q'
+  },
+  {
+    name: 'Calzado',
+    url: '/catalogo?cat=Calzado',
+    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8AdGAd_yHFSDRYwQ3NtT4sqjKH7SZfR9nLM20G5KUpJ2sjjFxBmhIr07Nz_4aiH2WODnm7QfYPxdHr-xA9ujCL3R7obycbVUMG6yvWYp0b7Ry7jWLuth8vEjQLateu53WrhYkGkNEzyTZPo3SphMBRzKD5d_JDUWYugZHazCbIMbuE5xVW0tC6RNTTvSxCS_o4BzbGF9aySl-E9FR-uHMPm89kCSo74SxcJ5x3mJBBtyYm0XJaHN-'
+  },
+  {
+    name: 'Accesorios',
+    url: '/catalogo?cat=Accesorios',
+    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBi_k7usLmZTCZ9ROokaCzZ_VisVH4Pluf3GcfNUlQsx1UOa2HiczbULGOKUxRQO61Tpg-dcseOCBMueCTF26URTt100cii5ihOqFzkvUQ250X5CCp2mic1BC7oqeuvHm9s7pohZpXOfq00jzIAaTDNtrRyfItuTHusfgurjKftonnSUIST1PvbAiepjmVGnIxX4CXbtxSNNiaKcvh_vhmrXD94D0ZdDOHiw40l4mZmVUlJ9BfBHjw1'
+  }
+];
+---
+
+<Layout title="ATELIER — Descubrimiento Editorial">
+  <div class="max-w-6xl mx-auto flex flex-col w-full">
+    <!-- 1. Hero Editorial Section -->
+    <section class="relative w-full px-margin pb-space-lg pt-2 md:pt-4">
+      <div class="relative w-full rounded-xl overflow-hidden aspect-[4/5] md:aspect-[21/9] bg-surface-container shadow-ambient">
+        <img
+          class="w-full h-full object-cover transition-transform duration-1000 ease-out hover:scale-105"
+          alt="Minimalist high fashion editorial shoot in draped neutral ecru tailoring"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIgWohSci_vafaLlHPRtwF6DO6jFPCwXx7k-4A1qFgu3xot4_pomDmFsz3mJduSTkfSv60NV2oFibIfG4ZXQwHVKSZ8ACpKsvkhobnPJU0ePlpkBbgTeZcykKk63y4x2uYlrXtbLfr4M6N01OWzctYIuDBeXa8vf0IYHLyd8lekZhLU6lDNhLIgbR4YkbGt3MRSj_iFiTGWqugP1gB_XUoGQpLVIGg4HE9kcE1claQJ3J-4OgHyyiy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/30 to-transparent flex flex-col justify-end p-margin md:p-12">
+          <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed mb-space-xs font-semibold">
+            Edición Limitada • Cápsula 2025
+          </span>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-space-xs leading-tight max-w-xl font-serif">
+            Verano Silencioso
+          </h2>
+          <p class="font-body-md text-body-md text-surface-container-low mb-space-md opacity-90 max-w-lg leading-relaxed">
+            Sastrería contemporánea deconstruida, siluetas fluidas y la belleza táctil de los tejidos orgánicos puros.
+          </p>
+          <div>
+            <a
+              href="/catalogo"
+              class="inline-flex items-center gap-space-xs bg-surface-container-lowest text-primary px-space-md py-space-sm rounded font-label-md text-label-md tracking-wider uppercase transition-all duration-200 hover:bg-white active:scale-95 shadow-sm font-semibold group"
+            >
+              <span>Explorar Colección</span>
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Categorías Destacadas (Horizontal Scroll Carousel) -->
+    <section class="w-full pb-space-lg">
+      <div class="flex items-center justify-between px-margin mb-space-sm">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant font-semibold">
+          Explorar Categorías
+        </span>
+        <a href="/catalogo" class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider hover:underline">
+          Ver Todo
+        </a>
+      </div>
+      <div class="flex items-center gap-space-md overflow-x-auto px-margin py-space-xs no-scrollbar">
+        {categoriesWithImages.map(cat => (
+          <a href={cat.url} class="flex flex-col items-center gap-space-xs shrink-0 group focus:outline-none">
+            <div class="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-surface-container-high shadow-sm ring-1 ring-outline-variant/30 transition-all duration-300 group-hover:scale-105 group-active:scale-95">
+              <img class="w-full h-full object-cover" alt={cat.name} src={cat.img} loading="lazy" />
+            </div>
+            <span class="font-label-md text-label-md text-on-surface font-semibold tracking-tight group-hover:text-secondary transition-colors">
+              {cat.name}
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- 3. Selección Esencial: Piezas Icónicas (Grid 2 columnas móvil / 4 columnas desktop) -->
+    <section class="px-margin pb-space-xl">
+      <div class="flex items-end justify-between mb-space-md">
+        <div>
+          <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary block mb-1 font-semibold">
+            Selección Esencial
+          </span>
+          <h3 class="font-headline-md text-headline-md text-on-surface font-serif">
+            Piezas Icónicas
+          </h3>
+        </div>
+        <span class="font-label-md text-label-md text-on-surface-variant">
+          {featuredProducts.length} modelos
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-space-md md:gap-space-lg">
+        {featuredProducts.map(product => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    </section>
+
+    <!-- 4. Manifiesto Editorial de Marca -->
+    <section class="px-margin pb-space-xl">
+      <div class="bg-surface-container-low rounded-xl p-8 md:p-14 border border-outline-variant/40 flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-1 space-y-4">
+          <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">
+            Manifiesto Atelier
+          </span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-serif leading-tight">
+            La elegancia de lo táctil y lo atemporal
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Creemos en una moda que no caduca con el calendario. Cada una de nuestras prendas está esculpida a mano en talleres familiares de España y Portugal con fibras naturales puras: lino belga, seda salvaje y algodón de fibra extralarga.
+          </p>
+          <div class="pt-2">
+            <a
+              href="/catalogo"
+              class="inline-block border-b-2 border-primary text-primary font-label-md uppercase tracking-wider font-bold py-1 hover:border-secondary hover:text-secondary transition-colors"
+            >
+              Conocer nuestro proceso artesanal →
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-80 aspect-[4/5] rounded-lg overflow-hidden shadow-ambient">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5-KRAcVb1hnXq5bAJ5eIO3RXVaLY-An5-7KN_xF8gBzlsj9A294ZmMYm4xAHvuVBciJxV0jFnZELkp1FJzR-MT7mlgWqQ3v5ipYOedaCUYraLZsK7E1foL0Aa9dTlaD3Gs4mXmfYOnAKxHXolTu78WCkrxzZYw0qeXJ93EeOxHZuOy2DT5l1fWAR5Hv8YMwCrN_839PVBQd0rWIwVfOjd0z7wZ3JpfyPl-nT1V2VfPHi1089pR40O"
+            alt="Detalle de costura artesanal"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+

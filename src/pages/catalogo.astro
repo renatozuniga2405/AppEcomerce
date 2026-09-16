@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { PRODUCTS, CATEGORIES } from '../data/products';
+
+const activeCat = Astro.url.searchParams.get('cat') || 'Todas';
+const sortBy = Astro.url.searchParams.get('sort') || 'default';
+
+let filteredProducts = activeCat === 'Todas'
+  ? PRODUCTS
+  : PRODUCTS.filter(p => p.category === activeCat);
+
+if (sortBy === 'price-asc') {
+  filteredProducts = [...filteredProducts].sort((a, b) => a.price - b.price);
+} else if (sortBy === 'price-desc') {
+  filteredProducts = [...filteredProducts].sort((a, b) => b.price - a.price);
+}
+---
+
+<Layout title="Catálogo & Colección — ATELIER" description="Explora toda la colección de sastrería deconstruida y prendas de autor.">
+  <div class="max-w-6xl mx-auto px-margin">
+    <!-- Header of Catalog -->
+    <div class="pt-4 pb-space-md flex flex-col md:flex-row md:items-end md:justify-between border-b border-outline-variant/30">
+      <div>
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold block mb-1">
+          Colección Permanente & Cápsulas
+        </span>
+        <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-serif">
+          {activeCat === 'Todas' ? 'Todas las Piezas' : activeCat}
+        </h1>
+      </div>
+      <div class="flex items-center gap-space-sm mt-3 md:mt-0 text-sm text-on-surface-variant">
+        <span>{filteredProducts.length} piezas encontradas</span>
+        <span class="text-outline-variant">•</span>
+        <!-- Sort Selector -->
+        <form method="GET" class="inline-flex items-center gap-1.5">
+          {activeCat !== 'Todas' && <input type="hidden" name="cat" value={activeCat} />}
+          <label for="sort-select" class="sr-only">Ordenar por</label>
+          <select
+            id="sort-select"
+            name="sort"
+            onchange="this.form.submit()"
+            class="bg-surface text-on-surface text-xs font-medium border border-outline-variant/60 rounded px-2.5 py-1.5 focus:outline-none focus:border-primary cursor-pointer"
+          >
+            <option value="default" selected={sortBy === 'default'}>Destacados</option>
+            <option value="price-asc" selected={sortBy === 'price-asc'}>Precio: Menor a Mayor</option>
+            <option value="price-desc" selected={sortBy === 'price-desc'}>Precio: Mayor a Menor</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="py-space-md flex items-center gap-space-xs overflow-x-auto no-scrollbar">
+      {CATEGORIES.map(cat => {
+        const isActive = activeCat === cat;
+        const url = cat === 'Todas' ? '/catalogo' : `/catalogo?cat=${encodeURIComponent(cat)}`;
+        return (
+          <a
+            href={url}
+            class={`px-4 py-1.5 rounded-full text-xs font-label-md tracking-wide uppercase transition-all duration-200 shrink-0 ${
+              isActive
+                ? 'bg-primary text-on-primary font-semibold shadow-xs'
+                : 'bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container border border-outline-variant/30'
+            }`}
+          >
+            {cat}
+          </a>
+        );
+      })}
+    </div>
+
+    <!-- Products Grid -->
+    <div class="pt-space-sm pb-space-xl">
+      {filteredProducts.length > 0 ? (
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-space-md md:gap-space-lg">
+          {filteredProducts.map(product => (
+            <ProductCard product={product} />
+          ))}
+        </div>
+      ) : (
+        <div class="py-20 text-center flex flex-col items-center">
+          <span class="material-symbols-outlined text-[48px] text-outline-variant mb-3">checkroom</span>
+          <h3 class="font-headline-md text-primary font-serif mb-2">No se encontraron prendas</h3>
+          <p class="text-sm text-on-surface-variant max-w-sm mb-6">
+            Actualmente no hay artículos disponibles en esta categoría. Te invitamos a explorar el catálogo completo.
+          </p>
+          <a
+            href="/catalogo"
+            class="bg-primary text-on-primary px-6 py-2.5 rounded font-label-md uppercase text-xs tracking-wider"
+          >
+            Ver Colección Completa
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+</Layout>
+

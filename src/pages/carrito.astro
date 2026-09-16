@@ -1,0 +1,245 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tu Bolsa de Compra — ATELIER" description="Revisa tus prendas seleccionadas y tramita tu pedido seguro.">
+  <div class="max-w-4xl mx-auto px-margin pt-4 pb-24 md:pb-16">
+    <div class="pb-space-md border-b border-outline-variant/30 flex items-center justify-between">
+      <div>
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold block mb-1">
+          Proceso de Compra
+        </span>
+        <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-serif">
+          Tu Bolsa (<span id="cart-count-title">0</span>)
+        </h1>
+      </div>
+      <a href="/catalogo" class="text-xs font-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary underline">
+        Continuar comprando
+      </a>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-cart-state" class="hidden py-24 text-center flex-col items-center justify-center">
+      <span class="material-symbols-outlined text-[64px] text-outline-variant mb-4">shopping_bag</span>
+      <h2 class="font-headline-md text-primary font-serif mb-2">Tu bolsa está vacía</h2>
+      <p class="text-sm text-on-surface-variant max-w-sm mb-6 leading-relaxed">
+        Descubre piezas únicas con acabados artesanales en nuestra última colección editorial.
+      </p>
+      <a
+        href="/catalogo"
+        class="bg-primary text-on-primary px-8 py-3 rounded font-label-md text-xs uppercase tracking-widest font-semibold hover:bg-black transition-all shadow-sm"
+      >
+        Explorar Colección
+      </a>
+    </div>
+
+    <!-- Cart Layout Grid: Items + Order Summary -->
+    <div id="cart-content-grid" class="mt-space-lg grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
+      <!-- Items List (7 cols) -->
+      <div class="md:col-span-7 flex flex-col divide-y divide-outline-variant/30" id="cart-items-container">
+        <!-- Rendered dynamically by client script -->
+      </div>
+
+      <!-- Order Summary Card (5 cols) -->
+      <div class="md:col-span-5">
+        <div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/40 shadow-subtle sticky top-24">
+          <h3 class="font-headline-md text-lg text-primary font-serif mb-4 pb-3 border-b border-outline-variant/30">
+            Resumen del Pedido
+          </h3>
+
+          <!-- Promo Code Input -->
+          <form onsubmit="event.preventDefault(); alert('Código ATELIER10 aplicado con éxito (10% de descuento).');" class="mb-6">
+            <label for="promo-input" class="block font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant mb-1.5 font-semibold">
+              Código Promocional / Vale
+            </label>
+            <div class="flex gap-2">
+              <input
+                id="promo-input"
+                type="text"
+                placeholder="Ej: ATELIER10"
+                class="bg-surface border border-outline-variant/60 rounded px-3 py-2 text-xs text-primary focus:outline-none focus:border-primary flex-1 uppercase"
+              />
+              <button
+                type="submit"
+                class="bg-surface-container-highest text-primary border border-outline-variant px-3 py-2 text-xs font-label-md uppercase font-semibold rounded hover:bg-surface-container transition-colors"
+              >
+                Aplicar
+              </button>
+            </div>
+          </form>
+
+          <!-- Cost Breakdown -->
+          <div class="space-y-3 text-sm text-on-surface-variant pb-5 border-b border-outline-variant/30">
+            <div class="flex justify-between">
+              <span>Subtotal</span>
+              <span id="summary-subtotal" class="text-primary font-medium">0 €</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <span>Envío Estándar</span>
+                <span class="block text-[10px] text-secondary font-medium">Gratis a partir de 200 €</span>
+              </div>
+              <span id="summary-shipping" class="text-primary font-medium">Gratis</span>
+            </div>
+            <div class="flex justify-between text-xs text-on-surface-variant/70">
+              <span>IVA Estimado (21%)</span>
+              <span id="summary-tax">0 €</span>
+            </div>
+          </div>
+
+          <!-- Total -->
+          <div class="pt-4 pb-6 flex justify-between items-baseline">
+            <span class="font-label-caps text-xs uppercase tracking-wider text-primary font-bold">Total Final</span>
+            <span id="summary-total" class="font-headline-md text-2xl font-serif text-primary font-bold">0 €</span>
+          </div>
+
+          <!-- Checkout CTA Button -->
+          <button
+            type="button"
+            onclick="alert('¡Redirigiendo a pasarela de pago segura con cifrado bancario SSL 256-bit!');"
+            class="w-full h-12 bg-primary text-on-primary font-label-md text-xs uppercase tracking-widest font-semibold rounded hover:bg-black active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-ambient"
+          >
+            <span class="material-symbols-outlined text-[18px]">lock</span>
+            <span>Tramitar Pedido Seguro</span>
+          </button>
+
+          <!-- Security Badges -->
+          <div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-around text-on-surface-variant/60 text-xs">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">verified</span> Pago Seguro</span>
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">cycle</span> 30 días devolución</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  import { getStoredCart, updateQuantity, removeFromCart, getCartTotals, type CartItem } from '../stores/cart';
+
+  function renderCart() {
+    const items = getStoredCart();
+    const container = document.getElementById('cart-items-container');
+    const emptyState = document.getElementById('empty-cart-state');
+    const contentGrid = document.getElementById('cart-content-grid');
+    const countTitle = document.getElementById('cart-count-title');
+    const subtotalEl = document.getElementById('summary-subtotal');
+    const shippingEl = document.getElementById('summary-shipping');
+    const taxEl = document.getElementById('summary-tax');
+    const totalEl = document.getElementById('summary-total');
+
+    if (!container || !emptyState || !contentGrid) return;
+
+    const { count, subtotal, shipping, total } = getCartTotals(items);
+
+    if (countTitle) countTitle.textContent = `${count} ${count === 1 ? 'prenda' : 'prendas'}`;
+
+    if (items.length === 0) {
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+      contentGrid.classList.add('hidden');
+      return;
+    }
+
+    emptyState.classList.add('hidden');
+    emptyState.classList.remove('flex');
+    contentGrid.classList.remove('hidden');
+
+    // Render items
+    container.innerHTML = items.map((item, idx) => `
+      <div class="py-5 flex gap-4 items-start group">
+        <!-- Thumbnail -->
+        <a href="/producto/${item.id}" class="w-20 aspect-[3/4] rounded-lg overflow-hidden bg-surface-container shrink-0 border border-outline-variant/40">
+          <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover" />
+        </a>
+
+        <!-- Details -->
+        <div class="flex-1 min-w-0 flex flex-col justify-between self-stretch">
+          <div>
+            <div class="flex justify-between items-start gap-2">
+              <a href="/producto/${item.id}" class="hover:underline">
+                <h4 class="font-title-md text-sm text-primary font-medium truncate">${item.name}</h4>
+              </a>
+              <button
+                type="button"
+                data-remove-idx="${idx}"
+                class="remove-btn text-on-surface-variant hover:text-error transition-colors p-1"
+                title="Eliminar de la bolsa"
+              >
+                <span class="material-symbols-outlined text-[18px]">delete</span>
+              </button>
+            </div>
+            <div class="text-xs text-on-surface-variant mt-1 space-x-2">
+              <span>Talla: <strong class="text-primary font-semibold">${item.size}</strong></span>
+              <span>•</span>
+              <span>Color: <strong class="text-primary font-semibold">${item.color}</strong></span>
+            </div>
+          </div>
+
+          <!-- Price & Quantity Controls -->
+          <div class="flex justify-between items-center mt-3 pt-2">
+            <div class="inline-flex items-center border border-outline-variant/50 rounded h-8 bg-surface">
+              <button
+                type="button"
+                data-minus-idx="${idx}"
+                class="qty-minus-btn w-7 h-full flex items-center justify-center text-on-surface-variant hover:text-primary text-xs"
+              >-</button>
+              <span class="w-6 text-center text-xs font-semibold text-primary">${item.quantity}</span>
+              <button
+                type="button"
+                data-plus-idx="${idx}"
+                class="qty-plus-btn w-7 h-full flex items-center justify-center text-on-surface-variant hover:text-primary text-xs"
+              >+</button>
+            </div>
+
+            <span class="font-headline-md text-base font-serif text-primary font-semibold">
+              ${item.price * item.quantity} €
+            </span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Attach listeners
+    container.querySelectorAll('.qty-minus-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const idx = Number((e.currentTarget as HTMLElement).dataset.minusIdx);
+        const item = items[idx];
+        if (item) updateQuantity(item.id, item.size, item.color, -1);
+      });
+    });
+
+    container.querySelectorAll('.qty-plus-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const idx = Number((e.currentTarget as HTMLElement).dataset.plusIdx);
+        const item = items[idx];
+        if (item) updateQuantity(item.id, item.size, item.color, 1);
+      });
+    });
+
+    container.querySelectorAll('.remove-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const idx = Number((e.currentTarget as HTMLElement).dataset.removeIdx);
+        const item = items[idx];
+        if (item) {
+          removeFromCart(item.id, item.size, item.color);
+          if (window.showAtelierToast) {
+            window.showAtelierToast('Prenda eliminada de tu bolsa');
+          }
+        }
+      });
+    });
+
+    // Update totals
+    if (subtotalEl) subtotalEl.textContent = `${subtotal} €`;
+    if (shippingEl) shippingEl.textContent = shipping === 0 ? 'Gratis' : `${shipping} €`;
+    if (taxEl) taxEl.textContent = `${(subtotal * 0.21).toFixed(2)} €`;
+    if (totalEl) totalEl.textContent = `${total} €`;
+  }
+
+  // Initial render & subscription
+  renderCart();
+  window.addEventListener('atelier:cart-updated', renderCart);
+  document.addEventListener('astro:page-load', renderCart);
+</script>
+

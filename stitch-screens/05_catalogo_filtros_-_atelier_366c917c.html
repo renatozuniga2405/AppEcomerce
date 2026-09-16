@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-tertiary-fixed': '#171e0e', 'on-primary': '#ffffff', 'tertiary-container': '#171e0e', 'on-secondary-fixed': '#3f0401', 'tertiary': '#000000', 'on-tertiary': '#ffffff', 'surface-tint': '#605e5c', 'surface-container-highest': '#e3e2e0', 'inverse-surface': '#2f312f', 'on-primary-container': '#868382', 'surface-bright': '#faf9f6', 'secondary-fixed': '#ffdad4', 'surface-container': '#efeeeb', 'on-surface-variant': '#4a4640', 'on-secondary-fixed-variant': '#7a2f22', 'background': '#faf9f6', 'error': '#ba1a1a', 'error-container': '#ffdad6', 'on-surface': '#1a1c1a', 'tertiary-fixed-dim': '#c1cab1', 'surface': '#faf9f6', 'surface-variant': '#e3e2e0', 'inverse-primary': '#cac6c4', 'on-secondary': '#ffffff', 'primary-container': '#1c1b1a', 'on-tertiary-fixed-variant': '#424936', 'inverse-on-surface': '#f2f1ee', 'on-primary-fixed-variant': '#484645', 'primary-fixed-dim': '#cac6c4', 'outline': '#7b766f', 'on-background': '#1a1c1a', 'primary': '#000000', 'on-primary-fixed': '#1c1b1a', 'secondary-fixed-dim': '#ffb4a6', 'on-error-container': '#93000a', 'surface-container-low': '#f4f3f0', 'on-error': '#ffffff', 'primary-fixed': '#e6e2df', 'secondary': '#984537', 'surface-container-high': '#e9e8e5', 'outline-variant': '#ccc5bd', 'on-secondary-container': '#782d21', 'surface-dim': '#dbdad7', 'tertiary-fixed': '#dee6cc', 'secondary-container': '#ff9784', 'surface-container-lowest': '#ffffff', 'on-tertiary-container': '#7f8770' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-xl': '2.5rem', 'space-lg': '1.5rem', 'space-xs': '0.25rem', 'margin-desktop': '3rem', 'gutter-desktop': '2rem', 'gutter': '1rem', 'space-md': '1rem', 'space-sm': '0.5rem', 'margin': '1.25rem' }, fontFamily: { 'headline-lg': ['Playfair Display'], 'label-md': ['Plus Jakarta Sans'], 'title-md': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Playfair Display'], 'display-lg': ['Playfair Display'], 'label-caps': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Playfair Display'], 'headline-md': ['Playfair Display'] }, fontSize: { 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '400' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'title-md': ['16px', { lineHeight: '22px', letterSpacing: '-0.01em', fontWeight: '600' }], 'body-md': ['13px', { lineHeight: '20px', fontWeight: '400' }], 'body-lg': ['15px', { lineHeight: '24px', fontWeight: '400' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '400' }], 'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '400' }], 'label-caps': ['10px', { lineHeight: '14px', letterSpacing: '0.12em', fontWeight: '700' }], 'display-lg-mobile': ['34px', { lineHeight: '42px', letterSpacing: '-0.01em', fontWeight: '400' }], 'headline-md': ['22px', { lineHeight: '28px', fontWeight: '500' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ATELIER Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WGvD3s2nHdpc6nOeUNLLZWwcvL7WXRB8AALbA8u8_jEnCwwuSz_aRqCdFrfwAwZ0OqW6GIRE1twwhC3aYCgFxeZTKgnldRZ14dtvaJKN4etFJ7C3qxSbSklluz1jM53pSD9XtxXO5_KLgqmQcc2qSyi63CNiG0FhRZO_NGkixC4x183vRKwyWh6ZjR5QzXAfCyVXS2gVw_7azuLDXsIDdQmLVqIa3n8dnPZalDjRQw6KL1r_DudbjoPH4"/><span class="font-headline-md text-headline-md tracking-widest text-primary">ATELIER</span></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Perfil" class="relative w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioxLIxW2WNHq967ifQzaHzCB9JWCLIdTSgooO7SxHqAFBvTqP88g9M0PEm8IAtsDvULUSvaZ3rkepxpHrhHnRPxh5tgK1mEksvPxXq1o7Ve0ZllkEMZowzha1jRSijiwhpfd967H41vGIlKZp-RZY3ZJppe1p33AuQvN1_w2Wxb_H3lZPXtaSFNp-wW9Gmk5G9ryUinNUB5LVKZOPl6-jBEggx7PkskJ1ANsyLKx6c6RrYyikm-Ja"/><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-background"><div class="flex flex-col w-full">
+<!-- Header Context & Collection Subtitle -->
+<div class="px-margin pt-space-md pb-space-sm flex items-baseline justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest block mb-0.5">Colección Permanente</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Catálogo</h2>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant bg-surface-container-low px-2.5 py-1 rounded-full shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps font-semibold">48 piezas</span>
+</div>
+</div>
+<!-- Quick Filter Pills Bar -->
+<div class="w-full overflow-x-auto no-scrollbar py-space-xs px-margin flex items-center gap-2">
+<button class="filter-chip active flex-shrink-0 px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm">
+      Todos
+    </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all">
+      Sastrería <span class="text-on-surface-variant text-[11px] ml-0.5">(12)</span>
+</button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all">
+      Vestidos <span class="text-on-surface-variant text-[11px] ml-0.5">(8)</span>
+</button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all">
+      Lino Puro
+    </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md hover:opacity-90 transition-all font-semibold">
+      Rebajas Especiales
+    </button>
+<button class="filter-chip flex-shrink-0 px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all">
+      Tallas XS-L
+    </button>
+</div>
+<!-- Catalog Control Bar (Filters Modal Trigger, Sorting, View Toggle) -->
+<div class="px-margin py-space-sm flex items-center justify-between gap-2 mt-1">
+<div class="flex items-center gap-2">
+<!-- Filter Sheet Trigger Button -->
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md shadow-sm active:scale-95 transition-transform" id="open-filter-btn">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Filtros</span>
+<span class="w-4 h-4 rounded-full bg-primary text-on-primary font-label-caps text-[9px] flex items-center justify-center font-bold">2</span>
+</button>
+<!-- Sort Dropdown Trigger -->
+<div class="relative">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md active:scale-95 transition-transform" id="sort-menu-btn">
+<span class="text-on-surface-variant text-[11px] uppercase tracking-wider">Orden:</span>
+<span class="font-medium" id="current-sort-label">Más recientes</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</button>
+<!-- Dropdown Popover -->
+<div class="hidden absolute top-full left-0 mt-1.5 w-44 bg-surface-container-lowest text-on-surface shadow-xl rounded-xl py-1 z-30" id="sort-dropdown">
+<button class="sort-option w-full text-left px-3 py-2 font-label-md text-label-md hover:bg-surface-container-low font-semibold text-primary">Más recientes</button>
+<button class="sort-option w-full text-left px-3 py-2 font-label-md text-label-md hover:bg-surface-container-low text-on-surface-variant">Menor a mayor precio</button>
+<button class="sort-option w-full text-left px-3 py-2 font-label-md text-label-md hover:bg-surface-container-low text-on-surface-variant">Mayor a menor precio</button>
+<button class="sort-option w-full text-left px-3 py-2 font-label-md text-label-md hover:bg-surface-container-low text-on-surface-variant">Populares</button>
+</div>
+</div>
+</div>
+<!-- View Toggle (Grid 2 col vs 1 col list) -->
+<div class="flex items-center bg-surface-container p-0.5 rounded-lg shadow-inner">
+<button aria-label="Vista cuadrícula" class="p-1.5 rounded-md bg-surface-container-lowest text-primary shadow-sm transition-colors" id="view-grid-btn">
+<span class="material-symbols-outlined text-[18px] block">grid_view</span>
+</button>
+<button aria-label="Vista lista" class="p-1.5 rounded-md text-on-surface-variant hover:text-on-surface transition-colors" id="view-list-btn">
+<span class="material-symbols-outlined text-[18px] block">view_agenda</span>
+</button>
+</div>
+</div>
+<!-- Product Grid (2 columns on mobile) -->
+<div class="grid grid-cols-2 gap-x-3 gap-y-6 px-margin pt-space-sm pb-space-lg" id="product-container">
+<!-- Card 1 -->
+<article class="group product-card flex flex-col w-full relative">
+<div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden mb-2.5 shadow-sm">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="High fashion editorial portrait of a tailored oversized raw linen blazer in neutral ecru tone, sculptural draping, studio lighting on warm alabaster backdrop, clean avant-garde styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUbgRbxbqXFAxCbs0hoABT3hjqGdrOsr_nzibSIpFFpnTEvzCf9KdeLfPUXgZnfidQtLDcNwyVpE9E51CrhY77UiFvBhrRej2d-jYG0Noj6mgSOg2_8SvQom8_K3oOvy5vemBeKmJe8TY0CnMD_NNMhKrjC8Dpe-H-JIdXV2mcRCK-OlPOiLVNglleCfe-8_afggHOvJjjkKq9E5oFzLaXGEBgA-_6e3Q7_pSuqCAdSWSpXw5ZGpGK"/>
+<!-- Status Badge -->
+<span class="absolute top-2.5 left-2.5 bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-caps text-label-caps px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold shadow-sm">
+          Tendencia
+        </span>
+<!-- Wishlist Toggle -->
+<button aria-label="Guardar en favoritos" class="wishlist-btn absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[17px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<!-- Color Swatches -->
+<div class="flex items-center gap-1.5 mb-1.5">
+<button class="w-3 h-3 rounded-full bg-[#E5E0D8] ring-1 ring-offset-1 ring-primary focus:outline-none" title="Crudo"></button>
+<button class="w-3 h-3 rounded-full bg-[#1A1C1A] opacity-80 hover:opacity-100 focus:outline-none" title="Negro"></button>
+<button class="w-3 h-3 rounded-full bg-[#984537] opacity-80 hover:opacity-100 focus:outline-none" title="Terracota"></button>
+</div>
+<h3 class="font-title-md text-[14px] leading-tight text-on-surface line-clamp-2 mb-1">
+            Blazer Lino Crudo Desestructurado
+          </h3>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-title-md text-primary font-semibold">$180</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Sastrería</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group product-card flex flex-col w-full relative">
+<div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden mb-2.5 shadow-sm">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Minimalist fashion editorial portrait of an asymmetric toasted silk halter top with fluid gathered shoulder, warm terracotta undertone, soft shadows on textured museum wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL4L5ZDHIaCsR4EuNLoRdTBh7VlBWgqUuVYqrMDuviV86FUL3V68xWiw7WQcztIuF71LwBmiilV6jq5SQy1Wmf1nH0KR0tQ7gSPpUxBAmzvsGjG495UwEphVR109-9jLo1KfNG0Hy_xyD0fwDA-3bU5Tuwnd3rZCyAaOa9bBKWcGvvAExJ2yQIAmjF9gfVk7Sl1yStzwxXUalG0QJG5B9kqh_n2MWqJLnzrcnQMj9mAPaL_ncR9HXN"/>
+<!-- Status Badge -->
+<span class="absolute top-2.5 left-2.5 bg-secondary text-on-secondary font-label-caps text-label-caps px-2 py-0.5 rounded-sm uppercase tracking-wider font-semibold shadow-sm">
+          Últimas unidades
+        </span>
+<!-- Wishlist Toggle -->
+<button aria-label="Guardar en favoritos" class="wishlist-btn absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[17px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<!-- Color Swatches -->
+<div class="flex items-center gap-1.5 mb-1.5">
+<button class="w-3 h-3 rounded-full bg-[#984537] ring-1 ring-offset-1 ring-primary focus:outline-none" title="Terracota Tostada"></button>
+<button class="w-3 h-3 rounded-full bg-[#E5E0D8] opacity-80 hover:opacity-100 focus:outline-none" title="Crudo"></button>
+</div>
+<h3 class="font-title-md text-[14px] leading-tight text-on-surface line-clamp-2 mb-1">
+            Top Asimétrico Seda Tostada
+          </h3>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-title-md text-primary font-semibold">$95</span>
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase">Exclusivo</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group product-card flex flex-col w-full relative">
+<div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden mb-2.5 shadow-sm">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="High-end editorial fashion photo of a fluid champagne satin maxi skirt gently moving, shimmering subtle golden ivory fabric, minimal luxury atmosphere in soft ambient morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGeb0mQGigGA758Id3YzKMe2n2VfFLQ6tOUR8U2LEV3oWZ3QyhU_-f6T0lQcQ7x6IvVPABZ-cvWloDzP9LRKsLOzb_R3Yhn-1bLTFVic-2xqx5ZpftMoF46Tu-DjS0gizN6Sa9AIQs51FG1Y6SdpFMZfY4eehlv-jNy5QO30AhpJABNPci-AsIrMdtndq_pnMDKYdELxQyyXVZYIjU5TTAS0zubrVWcU9BRptz3tqWEjbafeH5nnqw"/>
+<!-- Wishlist Toggle -->
+<button aria-label="Guardar en favoritos" class="wishlist-btn absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[17px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<!-- Color Swatches -->
+<div class="flex items-center gap-1.5 mb-1.5">
+<button class="w-3 h-3 rounded-full bg-[#EAE5D9] ring-1 ring-offset-1 ring-primary focus:outline-none" title="Champagne"></button>
+<button class="w-3 h-3 rounded-full bg-[#1A1C1A] opacity-80 hover:opacity-100 focus:outline-none" title="Negro Azabache"></button>
+</div>
+<h3 class="font-title-md text-[14px] leading-tight text-on-surface line-clamp-2 mb-1">
+            Falda Maxi Satinada Champagne
+          </h3>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-title-md text-primary font-semibold">$145</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Seda Pura</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group product-card flex flex-col w-full relative">
+<div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden mb-2.5 shadow-sm">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Close up architectural fashion shot of minimalist buttery black nappa leather strappy flat sandals on polished limestone surface, quiet luxury footwear concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOa1tHEYWcNGT9kjgpcO-dSEx5a8NWTIW6ZGsthe-ulsuDggGNWparY0LG8PDFJ8z-kmv1_py_uwdtX0xeDmI9u_KkLorpLoVP7vuH0XsK7g3SpsmuZPOMVGy6BEPa22EqTDB5hM4u-4Kkgna5LDsY4LIQh0jbh5kqRNo_pxcbvBplk9wuCXlJJx7kAgB_hVqH_I5nbVptVS5cGeZkW6TAvqQUJrzDLxlTT61GrYl8k2aI_AItVecm"/>
+<!-- Wishlist Toggle -->
+<button aria-label="Guardar en favoritos" class="wishlist-btn absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[17px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<!-- Color Swatches -->
+<div class="flex items-center gap-1.5 mb-1.5">
+<button class="w-3 h-3 rounded-full bg-[#1A1C1A] ring-1 ring-offset-1 ring-primary focus:outline-none" title="Negro"></button>
+<button class="w-3 h-3 rounded-full bg-[#8E6953] opacity-80 hover:opacity-100 focus:outline-none" title="Cognac"></button>
+<button class="w-3 h-3 rounded-full bg-[#E5E0D8] opacity-80 hover:opacity-100 focus:outline-none" title="Hueso"></button>
+</div>
+<h3 class="font-title-md text-[14px] leading-tight text-on-surface line-clamp-2 mb-1">
+            Sandalia Piel Nappa Minimalista
+          </h3>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-title-md text-primary font-semibold">$160</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Calzado</span>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="group product-card flex flex-col w-full relative">
+<div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden mb-2.5 shadow-sm">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Sleek studio lookbook photo of tailored structured wool waistcoat vest in heather charcoal slate gray with discreet horn buttons, high fashion minimalist framing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGHTmw9P7rw5O8tVk7ZbxB1pARAlVm_hLq9EBXdRqxU6lImiRcRKz7iwbP3zHR40pFFu_YGckLHc1QIaMXqOUFfAebFwn_hzTOf9wJRH-UI1X14D2zVQmHhGNO9jt8pKIy1pt5L6ie8FQ9Dx0TD_LaWk37F8hBBnPOHpBMeFv3YOESqmtLgCGYWYdc3l7NJKKpO6HFy-yG8pyyLrixFi4tRoYySNferZACMNGH1P9IiFt7vPKaYIBF"/>
+<!-- Wishlist Toggle -->
+<button aria-label="Guardar en favoritos" class="wishlist-btn absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[17px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<!-- Color Swatches -->
+<div class="flex items-center gap-1.5 mb-1.5">
+<button class="w-3 h-3 rounded-full bg-[#525553] ring-1 ring-offset-1 ring-primary focus:outline-none" title="Gris Pizarra"></button>
+<button class="w-3 h-3 rounded-full bg-[#1A1C1A] opacity-80 hover:opacity-100 focus:outline-none" title="Negro"></button>
+</div>
+<h3 class="font-title-md text-[14px] leading-tight text-on-surface line-clamp-2 mb-1">
+            Chaleco Sastre Estructurado Gris
+          </h3>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-title-md text-primary font-semibold">$120</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Sastrería</span>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="group product-card flex flex-col w-full relative">
+<div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden mb-2.5 shadow-sm">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="High quality fashion editorial of an optic crisp white organic poplin cotton shirt with band collar mandarin neckline, clean minimalist silhouette, sculptural architectural drape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO0b7_u8J9S0Bbq4744Yy8pMwbXlj6_BZm06Ka2FvXQO-4_Pf0OZXc3TM-8tjFFDuQIr9eMI6IS741VNELdKNGbd4wTkqhHlAL8cI2bQrsnxst79iJyOXMga9Pc8g3GM6wVj00WniOHrUD75hNlwfIWLYKrczxMHVueous4ClKcSK8H_fR5-_bEiHiNH3i_WaAJb9J2FKHsamU_ff5phShphN5w7lzVhErQAm7RlbI2KjYWvKzq_Aq"/>
+<!-- Wishlist Toggle -->
+<button aria-label="Guardar en favoritos" class="wishlist-btn absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[17px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-1 justify-between">
+<div>
+<!-- Color Swatches -->
+<div class="flex items-center gap-1.5 mb-1.5">
+<button class="w-3 h-3 rounded-full bg-[#FAF9F6] ring-1 ring-offset-1 ring-primary focus:outline-none" title="Blanco Óptico"></button>
+<button class="w-3 h-3 rounded-full bg-[#D4CFBE] opacity-80 hover:opacity-100 focus:outline-none" title="Piedra Claro"></button>
+<button class="w-3 h-3 rounded-full bg-[#1A1C1A] opacity-80 hover:opacity-100 focus:outline-none" title="Negro"></button>
+</div>
+<h3 class="font-title-md text-[14px] leading-tight text-on-surface line-clamp-2 mb-1">
+            Camisa Popelín Cuello Mao
+          </h3>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-label-md text-title-md text-primary font-semibold">$110</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Básicos</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Loading State Indicator & Pagination -->
+<div class="px-margin pt-space-xs pb-space-xl flex flex-col items-center justify-center text-center">
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant shadow-sm mb-3">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-md text-label-md">Cargando más piezas...</span>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant/80 tracking-widest uppercase">
+      Mostrando 6 de 48 siluetas
+    </p>
+</div>
+<!-- Floating Filter Bottom Sheet (Interactive Drawer) -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 hidden transition-opacity duration-300" id="filter-backdrop">
+<div class="fixed bottom-0 inset-x-0 bg-surface-container-lowest rounded-t-xl p-space-md max-h-[751px] overflow-y-auto flex flex-col shadow-2xl translate-y-full transition-transform duration-300 ease-out" id="filter-sheet">
+<!-- Handlebar -->
+<div class="w-10 h-1 rounded-full bg-surface-container-highest mx-auto mb-4"></div>
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Filtrar Colección</h3>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-filter-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Categories -->
+<div class="space-y-4 mb-space-lg">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-2 font-bold tracking-wider">Categoría</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md">Todas</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">Sastrería</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">Vestidos</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">Tops &amp; Camisas</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">Calzado</button>
+</div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-2 font-bold tracking-wider">Rango de Precio</span>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-low px-3 py-2 rounded-lg">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block">Mínimo</span>
+<span class="font-title-md text-title-md text-on-surface">$50</span>
+</div>
+<div class="bg-surface-container-low px-3 py-2 rounded-lg">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block">Máximo</span>
+<span class="font-title-md text-title-md text-on-surface">$250</span>
+</div>
+</div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-2 font-bold tracking-wider">Tallas</span>
+<div class="grid grid-cols-5 gap-1.5 text-center">
+<button class="py-2 rounded-lg bg-surface-container font-label-md text-label-md">XS</button>
+<button class="py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold">S</button>
+<button class="py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold">M</button>
+<button class="py-2 rounded-lg bg-surface-container font-label-md text-label-md">L</button>
+<button class="py-2 rounded-lg bg-surface-container font-label-md text-label-md">XL</button>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-sm flex items-center gap-3 mt-auto">
+<button class="flex-1 py-3.5 rounded-lg bg-surface-container text-on-surface font-title-md text-[14px] text-center active:scale-95 transition-transform" id="reset-filters-btn">
+          Limpiar
+        </button>
+<button class="flex-[2] py-3.5 rounded-lg bg-primary text-on-primary font-title-md text-[14px] text-center shadow-md active:scale-95 transition-transform" id="apply-filters-btn">
+          Ver 48 piezas
+        </button>
+</div>
+</div>
+</div>
+<script>
+    // Wishlist Toggle Delight
+    document.querySelectorAll('.wishlist-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const isFavorited = icon.style.fontVariationSettings.includes("'FILL' 1");
+        
+        if (isFavorited) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.remove('text-secondary');
+          btn.classList.add('text-on-surface');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.add('text-secondary');
+          btn.classList.remove('text-on-surface');
+          
+          // Micro-animation scale bounce
+          btn.classList.add('scale-125');
+          setTimeout(() => btn.classList.remove('scale-125'), 180);
+        }
+      });
+    });
+
+    // Pill Filter Tabs Selection
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.filter-chip').forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          c.classList.add('bg-surface-container-high', 'text-on-surface');
+        });
+        chip.classList.remove('bg-surface-container-high', 'text-on-surface');
+        chip.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      });
+    });
+
+    // Sort Dropdown Controls
+    const sortBtn = document.getElementById('sort-menu-btn');
+    const sortDropdown = document.getElementById('sort-dropdown');
+    const sortLabel = document.getElementById('current-sort-label');
+
+    sortBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sortDropdown.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.sort-option').forEach(option => {
+      option.addEventListener('click', () => {
+        sortLabel.textContent = option.textContent;
+        document.querySelectorAll('.sort-option').forEach(o => {
+          o.classList.remove('font-semibold', 'text-primary');
+          o.classList.add('text-on-surface-variant');
+        });
+        option.classList.add('font-semibold', 'text-primary');
+        option.classList.remove('text-on-surface-variant');
+        sortDropdown.classList.add('hidden');
+      });
+    });
+
+    document.addEventListener('click', () => {
+      if (!sortDropdown.classList.contains('hidden')) {
+        sortDropdown.classList.add('hidden');
+      }
+    });
+
+    // View Toggle Layout
+    const productContainer = document.getElementById('product-container');
+    const viewGridBtn = document.getElementById('view-grid-btn');
+    const viewListBtn = document.getElementById('view-list-btn');
+
+    viewListBtn.addEventListener('click', () => {
+      productContainer.classList.remove('grid-cols-2');
+      productContainer.classList.add('grid-cols-1');
+      viewListBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      viewListBtn.classList.remove('text-on-surface-variant');
+      viewGridBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      viewGridBtn.classList.add('text-on-surface-variant');
+    });
+
+    viewGridBtn.addEventListener('click', () => {
+      productContainer.classList.remove('grid-cols-1');
+      productContainer.classList.add('grid-cols-2');
+      viewGridBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      viewGridBtn.classList.remove('text-on-surface-variant');
+      viewListBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      viewListBtn.classList.add('text-on-surface-variant');
+    });
+
+    // Filter Bottom Sheet Logic
+    const openFilterBtn = document.getElementById('open-filter-btn');
+    const closeFilterBtn = document.getElementById('close-filter-btn');
+    const filterBackdrop = document.getElementById('filter-backdrop');
+    const filterSheet = document.getElementById('filter-sheet');
+    const applyFiltersBtn = document.getElementById('apply-filters-btn');
+    const resetFiltersBtn = document.getElementById('reset-filters-btn');
+
+    function openFilters() {
+      filterBackdrop.classList.remove('hidden');
+      setTimeout(() => {
+        filterBackdrop.classList.add('opacity-100');
+        filterSheet.classList.remove('translate-y-full');
+      }, 10);
+    }
+
+    function closeFilters() {
+      filterSheet.classList.add('translate-y-full');
+      filterBackdrop.classList.remove('opacity-100');
+      setTimeout(() => {
+        filterBackdrop.classList.add('hidden');
+      }, 300);
+    }
+
+    openFilterBtn.addEventListener('click', openFilters);
+    closeFilterBtn.addEventListener('click', closeFilters);
+    applyFiltersBtn.addEventListener('click', closeFilters);
+    resetFiltersBtn.addEventListener('click', closeFilters);
+    filterBackdrop.addEventListener('click', (e) => {
+      if (e.target === filterBackdrop) closeFilters();
+    });
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-gutter"><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Inicio</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Catálogo</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="guardados" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Guardados</span></a><a class="relative flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="carrito" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-2 bg-secondary text-on-secondary font-label-caps text-[9px] w-4 h-4 rounded-full flex items-center justify-center leading-none font-bold">2</span></div><span class="font-label-caps text-label-caps uppercase tracking-wider">Carrito</span></a></div></nav></body></html>

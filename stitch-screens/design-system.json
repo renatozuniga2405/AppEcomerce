@@ -1,0 +1,160 @@
+{
+  "designSystems": [
+    {
+      "name": "assets/2334a32c056142eea7721ba918c2c7cd",
+      "designSystem": {
+        "displayName": "Contemporary Fashion Atelier",
+        "styleGuidelines": "## Brand & Style\n\nThis design system embodies the disciplined restraint and understated luxury of an avant-garde fashion house and digital editorial space. Designed for an audience of discerning patrons, stylists, and conscious tastemakers, it evokes calm curation, deliberate craftsmanship, and tactile elegance. \n\nThe visual strategy adopts an editorial minimalist approach:\n- **Atmospheric Space:** Layouts honor intentional emptiness, allowing garments, editorial imagery, and sculpted silhouettes room to command focus.\n- **Architectural Framing:** Subtle hairline dividers and disciplined geometric alignments establish structure without visual clutter.\n- **Micro-Delight:** Transitions, interactive states, and gestural sheets mirror the graceful drape and fluidity of bespoke fabrics.\n\n## Layout & Spacing\n\nA mobile-first fluid grid anchors all shopping experiences with consistent margins and vertical pacing:\n\n- **Mobile Viewports (<640px):** 4-column layout with 20px (`1.25rem`) safe margins and 16px (`1rem`) gutters. Product feeds arrange in alternating rhythmic pairs or single full-bleed hero cards.\n- **Tablet / Desktop Expansion (640px - 1280px):** Expands to 8 and 12 columns with 32px (`2rem`) gutters, allowing multi-look lookbooks and side-by-side product detail inspect modes.\n- **Rhythm:** Spacing follows an 8pt architectural rhythm, with `space-xl` deployed between editorial chapters to create generous breathing room.\n\n## Elevation & Depth\n\nVisual separation relies on structural layering and architectural framing rather than heavy, artificial drop shadows:\n\n- **Tonal Substrates:** Modals and bottom sheets emerge via layered tone shifts: canvas `#F9F8F5` rests over layered modal surfaces tinted `#FFFFFF`, bordered with delicate `#E5E2DC` outlines.\n- **Hairline Borders:** Cards and panels utilize crisp 1px borders in `#E5E2DC` or `#191817` to define boundaries cleanly.\n- **Diffused Ambient Halos:** Floating action bars, sticky \"Add to Bag\" bars, and sheet trays employ an ultra-diffused, warm-tinted shadow (`box-shadow: 0 16px 36px -8px rgba(25, 24, 23, 0.06)`).\n- **Glassmorphism:** Navigation bars and header toolbars utilize frosted backdrop blurs (`backdrop-filter: blur(16px) saturate(140%)`) tinted at 80% opacity over page content.\n\n## Components\n\n### Buttons & Interactive Controls\n- **Primary CTA:** Solid Charcoal (`#191817`) with crisp Alabaster (`#F9F8F5`) text. Minimal 4px corner radius, standard 52px height for mobile touch ergonomics. Press states trigger a slight scale contraction (0.985) and an opacity transition to 0.9.\n- **Secondary CTA:** Ghost outline with a 1px solid `#191817` border and transparent background.\n- **Pill Filter Tabs:** Dynamic scrollable pill selectors with subtle 1px `#E5E2DC` borders, active states filling with solid Charcoal and inverted text.\n\n### Product Display Cards\n- **Image Treatment:** Aspect ratio fixed at 3:4 (editorial portrait standard). Images are enclosed in 4px subtle rounded frames with soft `#EFECE6` placeholder fills while loading.\n- **Meta Hierarchy:** Brand name in `label-caps`, garment title in `title-md`, followed by fluid pricing with accent marks for sales in `#9E4A3B`.\n- **Wishlist Toggle:** Floating circular icon button top-right, featuring an ethereal 28px glass circle with a razor-thin vector silhouette.\n\n### Form Fields & Inputs\n- Understated floating underline or hairline boxed forms with 1px border `#D4CEC4`. Focus states transition smoothly to `#191817`.\n- Error states shift the bottom hairline to Raw Terracotta (`#9E4A3B`) with caption errors rendered in `label-md`.\n\n### Navigation & Bottom Action Trays\n- **Bottom Navigation:** Fixed minimal bar with 4-5 icons, labels omitted or rendered in micro caps.\n- **Sticky Purchase Tray (PDP):** Retains high visual prominence with size selectors and bag CTAs enclosed in an ambient-shadowed alabaster drawer.",
+        "theme": {
+          "colorMode": "LIGHT",
+          "font": "PLAYFAIR_DISPLAY",
+          "roundness": "ROUND_FOUR",
+          "customColor": "#191817",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "bodyFont": "PLUS_JAKARTA_SANS",
+          "labelFont": "PLUS_JAKARTA_SANS",
+          "namedColors": {
+            "on_primary_container": "#868382",
+            "background": "#faf9f6",
+            "on_error": "#ffffff",
+            "on_secondary_fixed_variant": "#7a2f22",
+            "on_surface_variant": "#4a4640",
+            "surface_container_low": "#f4f3f0",
+            "surface_container_lowest": "#ffffff",
+            "on_primary": "#ffffff",
+            "on_secondary_fixed": "#3f0401",
+            "on_secondary_container": "#782d21",
+            "tertiary_fixed": "#dee6cc",
+            "inverse_surface": "#2f312f",
+            "surface": "#faf9f6",
+            "outline_variant": "#ccc5bd",
+            "tertiary_container": "#171e0e",
+            "surface_dim": "#dbdad7",
+            "error": "#ba1a1a",
+            "on_tertiary_container": "#7f8770",
+            "secondary": "#984537",
+            "on_background": "#1a1c1a",
+            "surface_bright": "#faf9f6",
+            "outline": "#7b766f",
+            "surface_tint": "#605e5c",
+            "primary_fixed": "#e6e2df",
+            "tertiary_fixed_dim": "#c1cab1",
+            "primary_container": "#1c1b1a",
+            "surface_variant": "#e3e2e0",
+            "inverse_primary": "#cac6c4",
+            "on_secondary": "#ffffff",
+            "secondary_fixed": "#ffdad4",
+            "primary_fixed_dim": "#cac6c4",
+            "on_tertiary": "#ffffff",
+            "secondary_container": "#ff9784",
+            "secondary_fixed_dim": "#ffb4a6",
+            "tertiary": "#000000",
+            "on_tertiary_fixed": "#171e0e",
+            "on_primary_fixed": "#1c1b1a",
+            "on_error_container": "#93000a",
+            "inverse_on_surface": "#f2f1ee",
+            "on_primary_fixed_variant": "#484645",
+            "error_container": "#ffdad6",
+            "primary": "#000000",
+            "on_tertiary_fixed_variant": "#424936",
+            "surface_container": "#efeeeb",
+            "on_surface": "#1a1c1a",
+            "surface_container_high": "#e9e8e5",
+            "surface_container_highest": "#e3e2e0"
+          },
+          "designMd": "---\nname: Contemporary Fashion Atelier\ncolors:\n  surface: '#faf9f6'\n  surface-dim: '#dbdad7'\n  surface-bright: '#faf9f6'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f3f0'\n  surface-container: '#efeeeb'\n  surface-container-high: '#e9e8e5'\n  surface-container-highest: '#e3e2e0'\n  on-surface: '#1a1c1a'\n  on-surface-variant: '#4a4640'\n  inverse-surface: '#2f312f'\n  inverse-on-surface: '#f2f1ee'\n  outline: '#7b766f'\n  outline-variant: '#ccc5bd'\n  surface-tint: '#605e5c'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1a'\n  on-primary-container: '#868382'\n  inverse-primary: '#cac6c4'\n  secondary: '#984537'\n  on-secondary: '#ffffff'\n  secondary-container: '#ff9784'\n  on-secondary-container: '#782d21'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#171e0e'\n  on-tertiary-container: '#7f8770'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e6e2df'\n  primary-fixed-dim: '#cac6c4'\n  on-primary-fixed: '#1c1b1a'\n  on-primary-fixed-variant: '#484645'\n  secondary-fixed: '#ffdad4'\n  secondary-fixed-dim: '#ffb4a6'\n  on-secondary-fixed: '#3f0401'\n  on-secondary-fixed-variant: '#7a2f22'\n  tertiary-fixed: '#dee6cc'\n  tertiary-fixed-dim: '#c1cab1'\n  on-tertiary-fixed: '#171e0e'\n  on-tertiary-fixed-variant: '#424936'\n  background: '#faf9f6'\n  on-background: '#1a1c1a'\n  surface-variant: '#e3e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 34px\n    fontWeight: '400'\n    lineHeight: 42px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 26px\n    fontWeight: '400'\n    lineHeight: 34px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 22px\n    fontWeight: '500'\n    lineHeight: 28px\n  title-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '600'\n    lineHeight: 22px\n    letterSpacing: -0.01em\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 15px\n    fontWeight: '400'\n    lineHeight: 24px\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 20px\n  label-caps:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 10px\n    fontWeight: '700'\n    lineHeight: 14px\n    letterSpacing: 0.12em\n  label-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.02em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  gutter: 1rem\n  gutter-desktop: 2rem\n  margin: 1.25rem\n  margin-desktop: 3rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.5rem\n---\n\n## Brand & Style\n\nThis design system embodies the disciplined restraint and understated luxury of an avant-garde fashion house and digital editorial space. Designed for an audience of discerning patrons, stylists, and conscious tastemakers, it evokes calm curation, deliberate craftsmanship, and tactile elegance. \n\nThe visual strategy adopts an editorial minimalist approach:\n- **Atmospheric Space:** Layouts honor intentional emptiness, allowing garments, editorial imagery, and sculpted silhouettes room to command focus.\n- **Architectural Framing:** Subtle hairline dividers and disciplined geometric alignments establish structure without visual clutter.\n- **Micro-Delight:** Transitions, interactive states, and gestural sheets mirror the graceful drape and fluidity of bespoke fabrics.\n\n## Colors\n\nThe palette establishes an organic, museum-grade environment where product photography remains the central focus:\n\n- **Primary (`#191817` - Deep Noir Charcoal):** Replaces pure digital black with a softer, warm obsidian tone for primary typography, dominant structural outlines, and key call-to-action fills.\n- **Secondary (`#9E4A3B` - Raw Terracotta):** A warm, sun-baked earth tone reserved for deliberate accents: price reductions, selected filter dots, notifications, and editorial highlights.\n- **Tertiary (`#606853` - Muted Olive Dust):** An archival mineral tint applied to secondary badges, sustainability callouts, and seasonal capsule markers.\n- **Neutral Surface (`#F9F8F5` - Warm Alabaster Stone):** The foundational canvas. Paired with a subtle secondary tint (`#EFECE6` - Pale Sand) for surface cards, structural dividers, and interactive wells.\n\n## Typography\n\nThe type system balances the literary grace of classical editorial publishing with crisp, modern digital ergonomics:\n\n- **Display & Headlines (Playfair Display):** Conveys deliberate pacing and prestige. It is applied to collection titles, editorial features, hero campaigns, and dialogue modal titles.\n- **Interface & Body (Plus Jakarta Sans):** Delivers clean legibility across small mobile viewports. Geometric yet warm proportions make product metadata, price points, and system feedback effortless to parse.\n- **Label Caps:** Rendered in uppercase with generous tracking (`0.12em`), used exclusively for categories, status badges, and tab headers to mirror high-fashion print layouts.\n\n## Layout & Spacing\n\nA mobile-first fluid grid anchors all shopping experiences with consistent margins and vertical pacing:\n\n- **Mobile Viewports (<640px):** 4-column layout with 20px (`1.25rem`) safe margins and 16px (`1rem`) gutters. Product feeds arrange in alternating rhythmic pairs or single full-bleed hero cards.\n- **Tablet / Desktop Expansion (640px - 1280px):** Expands to 8 and 12 columns with 32px (`2rem`) gutters, allowing multi-look lookbooks and side-by-side product detail inspect modes.\n- **Rhythm:** Spacing follows an 8pt architectural rhythm, with `space-xl` deployed between editorial chapters to create generous breathing room.\n\n## Elevation & Depth\n\nVisual separation relies on structural layering and architectural framing rather than heavy, artificial drop shadows:\n\n- **Tonal Substrates:** Modals and bottom sheets emerge via layered tone shifts: canvas `#F9F8F5` rests over layered modal surfaces tinted `#FFFFFF`, bordered with delicate `#E5E2DC` outlines.\n- **Hairline Borders:** Cards and panels utilize crisp 1px borders in `#E5E2DC` or `#191817` to define boundaries cleanly.\n- **Diffused Ambient Halos:** Floating action bars, sticky \"Add to Bag\" bars, and sheet trays employ an ultra-diffused, warm-tinted shadow (`box-shadow: 0 16px 36px -8px rgba(25, 24, 23, 0.06)`).\n- **Glassmorphism:** Navigation bars and header toolbars utilize frosted backdrop blurs (`backdrop-filter: blur(16px) saturate(140%)`) tinted at 80% opacity over page content.\n\n## Shapes\n\nThe design system employs refined, architectural contours (`roundedness: 1`):\n\n- **Cards, Modals, & Imagery:** Use soft 4px (`0.25rem`) to 8px (`0.5rem`) radii to preserve crisp lines without feeling aggressive.\n- **Interactive Pills & Filter Chips:** Employ pill-radius closures (`9999px`) to create a tactile contrast against orthogonal product photography.\n\n## Components\n\n### Buttons & Interactive Controls\n- **Primary CTA:** Solid Charcoal (`#191817`) with crisp Alabaster (`#F9F8F5`) text. Minimal 4px corner radius, standard 52px height for mobile touch ergonomics. Press states trigger a slight scale contraction (0.985) and an opacity transition to 0.9.\n- **Secondary CTA:** Ghost outline with a 1px solid `#191817` border and transparent background.\n- **Pill Filter Tabs:** Dynamic scrollable pill selectors with subtle 1px `#E5E2DC` borders, active states filling with solid Charcoal and inverted text.\n\n### Product Display Cards\n- **Image Treatment:** Aspect ratio fixed at 3:4 (editorial portrait standard). Images are enclosed in 4px subtle rounded frames with soft `#EFECE6` placeholder fills while loading.\n- **Meta Hierarchy:** Brand name in `label-caps`, garment title in `title-md`, followed by fluid pricing with accent marks for sales in `#9E4A3B`.\n- **Wishlist Toggle:** Floating circular icon button top-right, featuring an ethereal 28px glass circle with a razor-thin vector silhouette.\n\n### Form Fields & Inputs\n- Understated floating underline or hairline boxed forms with 1px border `#D4CEC4`. Focus states transition smoothly to `#191817`.\n- Error states shift the bottom hairline to Raw Terracotta (`#9E4A3B`) with caption errors rendered in `label-md`.\n\n### Navigation & Bottom Action Trays\n- **Bottom Navigation:** Fixed minimal bar with 4-5 icons, labels omitted or rendered in micro caps.\n- **Sticky Purchase Tray (PDP):** Retains high visual prominence with size selectors and bag CTAs enclosed in an ambient-shadowed alabaster drawer.",
+          "colorVariant": "FIDELITY",
+          "overridePrimaryColor": "#191817",
+          "overrideSecondaryColor": "#9e4a3b",
+          "overrideTertiaryColor": "#606853",
+          "overrideNeutralColor": "#f9f8f5",
+          "spacingScale": 2,
+          "typography": {
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "400",
+              "lineHeight": "56px",
+              "letterSpacing": "-0.02em"
+            },
+            "body-md": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "lineHeight": "20px"
+            },
+            "label-md": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em"
+            },
+            "body-lg": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "15px",
+              "fontWeight": "400",
+              "lineHeight": "24px"
+            },
+            "label-caps": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "10px",
+              "fontWeight": "700",
+              "lineHeight": "14px",
+              "letterSpacing": "0.12em"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "34px",
+              "fontWeight": "400",
+              "lineHeight": "42px",
+              "letterSpacing": "-0.01em"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "400",
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "22px",
+              "fontWeight": "500",
+              "lineHeight": "28px"
+            },
+            "title-md": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "16px",
+              "fontWeight": "600",
+              "lineHeight": "22px",
+              "letterSpacing": "-0.01em"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "26px",
+              "fontWeight": "400",
+              "lineHeight": "34px",
+              "letterSpacing": "-0.01em"
+            }
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "1.25rem",
+            "space-lg": "1.5rem",
+            "gutter-desktop": "2rem"
+          },
+          "headlineFontFamily": "Playfair Display",
+          "bodyFontFamily": "Plus Jakarta Sans",
+          "labelFontFamily": "Plus Jakarta Sans"
+        }
+      },
+      "version": "1"
+    }
+  ]
+}

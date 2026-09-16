@@ -1,0 +1,62 @@
+[
+  {
+    "index": 1,
+    "resourceName": "projects/2892589383403496037/screens/1c453cd9123844c4b8af9555c0621707",
+    "title": "Editorial portrait of an elegant stylish young woman wearing modern minimalist linen tailoring, soft natural studio light, warm neutral beige background, fashion profile avatar",
+    "deviceType": "CUSTOM",
+    "width": "1024",
+    "height": "1024",
+    "file": null,
+    "screenshot": "01_editorial_portrait_of_an_elegant_st_1c453cd9.png"
+  },
+  {
+    "index": 2,
+    "resourceName": "projects/2892589383403496037/screens/b37cba9a6397472cb679c926abc2d9cf",
+    "title": "Detalle de Prenda - Blazer Lino",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "2884",
+    "file": "02_detalle_de_prenda_-_blazer_lino_b37cba9a.html",
+    "screenshot": "02_detalle_de_prenda_-_blazer_lino_b37cba9a.png"
+  },
+  {
+    "index": 3,
+    "resourceName": "projects/2892589383403496037/screens/f2be5d35b6ca48b2873f812be2d0692b",
+    "title": "ATELIER Logo",
+    "deviceType": "CUSTOM",
+    "width": "240",
+    "height": "120",
+    "file": "03_atelier_logo_f2be5d35.svg",
+    "screenshot": "03_atelier_logo_f2be5d35.png"
+  },
+  {
+    "index": 4,
+    "resourceName": "projects/2892589383403496037/screens/6505c74fe37a46c689ce4a33e2fc6615",
+    "title": "Inicio - Descubrimiento Editorial",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "4234",
+    "file": "04_inicio_-_descubrimiento_editorial_6505c74f.html",
+    "screenshot": "04_inicio_-_descubrimiento_editorial_6505c74f.png"
+  },
+  {
+    "index": 5,
+    "resourceName": "projects/2892589383403496037/screens/366c917c5ddd4badaf14c1eed388bb22",
+    "title": "Catálogo & Filtros - ATELIER",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "2932",
+    "file": "05_catalogo_filtros_-_atelier_366c917c.html",
+    "screenshot": "05_catalogo_filtros_-_atelier_366c917c.png"
+  },
+  {
+    "index": 6,
+    "resourceName": "projects/2892589383403496037/screens/021153e4461b4fbcbc2cc7c71a057110",
+    "title": "Bolsa & Carrito de Compra",
+    "deviceType": "MOBILE",
+    "width": "780",
+    "height": "2704",
+    "file": "06_bolsa_carrito_de_compra_021153e4.html",
+    "screenshot": "06_bolsa_carrito_de_compra_021153e4.png"
+  }
+]

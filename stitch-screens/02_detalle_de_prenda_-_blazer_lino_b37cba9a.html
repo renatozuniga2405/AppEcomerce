@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-tertiary-fixed': '#171e0e', 'on-primary': '#ffffff', 'tertiary-container': '#171e0e', 'on-secondary-fixed': '#3f0401', 'tertiary': '#000000', 'on-tertiary': '#ffffff', 'surface-tint': '#605e5c', 'surface-container-highest': '#e3e2e0', 'inverse-surface': '#2f312f', 'on-primary-container': '#868382', 'surface-bright': '#faf9f6', 'secondary-fixed': '#ffdad4', 'surface-container': '#efeeeb', 'on-surface-variant': '#4a4640', 'on-secondary-fixed-variant': '#7a2f22', 'background': '#faf9f6', 'error': '#ba1a1a', 'error-container': '#ffdad6', 'on-surface': '#1a1c1a', 'tertiary-fixed-dim': '#c1cab1', 'surface': '#faf9f6', 'surface-variant': '#e3e2e0', 'inverse-primary': '#cac6c4', 'on-secondary': '#ffffff', 'primary-container': '#1c1b1a', 'on-tertiary-fixed-variant': '#424936', 'inverse-on-surface': '#f2f1ee', 'on-primary-fixed-variant': '#484645', 'primary-fixed-dim': '#cac6c4', 'outline': '#7b766f', 'on-background': '#1a1c1a', 'primary': '#000000', 'on-primary-fixed': '#1c1b1a', 'secondary-fixed-dim': '#ffb4a6', 'on-error-container': '#93000a', 'surface-container-low': '#f4f3f0', 'on-error': '#ffffff', 'primary-fixed': '#e6e2df', 'secondary': '#984537', 'surface-container-high': '#e9e8e5', 'outline-variant': '#ccc5bd', 'on-secondary-container': '#782d21', 'surface-dim': '#dbdad7', 'tertiary-fixed': '#dee6cc', 'secondary-container': '#ff9784', 'surface-container-lowest': '#ffffff', 'on-tertiary-container': '#7f8770' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-xl': '2.5rem', 'space-lg': '1.5rem', 'space-xs': '0.25rem', 'margin-desktop': '3rem', 'gutter-desktop': '2rem', 'gutter': '1rem', 'space-md': '1rem', 'space-sm': '0.5rem', 'margin': '1.25rem' }, fontFamily: { 'headline-lg': ['Playfair Display'], 'label-md': ['Plus Jakarta Sans'], 'title-md': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Playfair Display'], 'display-lg': ['Playfair Display'], 'label-caps': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Playfair Display'], 'headline-md': ['Playfair Display'] }, fontSize: { 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '400' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'title-md': ['16px', { lineHeight: '22px', letterSpacing: '-0.01em', fontWeight: '600' }], 'body-md': ['13px', { lineHeight: '20px', fontWeight: '400' }], 'body-lg': ['15px', { lineHeight: '24px', fontWeight: '400' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '400' }], 'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '400' }], 'label-caps': ['10px', { lineHeight: '14px', letterSpacing: '0.12em', fontWeight: '700' }], 'display-lg-mobile': ['34px', { lineHeight: '42px', letterSpacing: '-0.01em', fontWeight: '400' }], 'headline-md': ['22px', { lineHeight: '28px', fontWeight: '500' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Regresar" class="w-11 h-11 -ml-2 flex items-center justify-center text-on-surface hover:text-on-surface-variant transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="ATELIER Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WGvD3s2nHdpc6nOeUNLLZWwcvL7WXRB8AALbA8u8_jEnCwwuSz_aRqCdFrfwAwZ0OqW6GIRE1twwhC3aYCgFxeZTKgnldRZ14dtvaJKN4etFJ7C3qxSbSklluz1jM53pSD9XtxXO5_KLgqmQcc2qSyi63CNiG0FhRZO_NGkixC4x183vRKwyWh6ZjR5QzXAfCyVXS2gVw_7azuLDXsIDdQmLVqIa3n8dnPZalDjRQw6KL1r_DudbjoPH4"/><h1 class="font-headline-md text-headline-md tracking-tight text-primary truncate max-w-[160px]">Detalle De Prenda</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="relative w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioxLIxW2WNHq967ifQzaHzCB9JWCLIdTSgooO7SxHqAFBvTqP88g9M0PEm8IAtsDvULUSvaZ3rkepxpHrhHnRPxh5tgK1mEksvPxXq1o7Ve0ZllkEMZowzha1jRSijiwhpfd967H41vGIlKZp-RZY3ZJppe1p33AuQvN1_w2Wxb_H3lZPXtaSFNp-wW9Gmk5G9ryUinNUB5LVKZOPl6-jBEggx7PkskJ1ANsyLKx6c6RrYyikm-Ja"/><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-background"><div class="flex flex-col w-full pb-28">
+<section class="relative w-full overflow-hidden bg-surface-container-low">
+<div class="flex w-full overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar" id="galleryTrack" style="-webkit-overflow-scrolling: touch;">
+<div class="w-full flex-shrink-0 snap-start relative aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="Full body studio shot of an elegant model wearing a tailored raw ecru oversized linen blazer, minimal modern atelier lighting, soft architectural shadows, neutral beige alabaster background, high fashion editorial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ8jVj9TS75mluVlowMDiYZ-SNMOYXj9eSm2ZKpql6oXaMwvhGvupRjTyMX0GwgnhJqx9ZdJfpQOvkHagethT2_hgqKtISDPp2wN1Ve0a-1Fb2X8EznVrQHG4GSHw9DBZpqQlnumKqURnlpuRYsma35L2jYiVzuRxt9lpQGqaiHWfX4UdcnM3SPLbqs5VlqEiGBhZAA2A9jbNqXvY2SoUNXsFm7Nz0TN8WE1B7r5cJf2aFuz7Ucl5b"/>
+</div>
+<div class="w-full flex-shrink-0 snap-start relative aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="Close-up macro detail of raw ecru linen fabric texture on an oversized blazer lapel, horn button finish, natural organic weave, soft sunlight casting gentle warm shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZjFbNP1bF1PCrRLfVN1WNznvUNRUVjek4liMqFgYUGDrfFCS9XFXB5xi4Sn216kxVfmGJtIYnJA3ava35xwKRGBnOoIW8exd-CjTHj98v3mUxc0FauCYDHhX_TSb23cY42itH0JN4WmWrD0IaZGP9f21b2dfbRze3NcfpnmUpMHiVZJd2dQwgd6C3Db20JHTDqYfhU0oBR-9wVjKrjHY5vB0-hBcV7jZcfTc00hlMbikmxVeNeVjm"/>
+</div>
+<div class="w-full flex-shrink-0 snap-start relative aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="Editorial side profile of model moving gracefully in an oversized raw linen tailored blazer, draping movement, subtle earthen tones, minimal studio composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh4PSptzcPvL6RhaMKUAuk012jAJabUIZhg94mvH39rTdHOH67N2130EU56NYtnXJDbTzRF0y54KYOGBsqTSlie3WRZ2u_VM7FTfLNBcGwXG0OAdv_zTwMLBl1yuN81oz9T10bFTp7s2_l0kGEKE8rTPpU_FcBoYzOfCtKmPxESxEIvi88UJGT1-kLYFug29muYKbHV8w5snK_Z4d8ZwrDmSAUA-ljXK2xW9FywKJCv9KnQxkiaD75"/>
+</div>
+<div class="w-full flex-shrink-0 snap-start relative aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="Back detail of oversized structured linen blazer showing subtle center vent and relaxed tailored silhouette against a soft warm stone studio backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMLoGVR91bFbzvVR3_KXIXmH9N1GZyYROx7vtG4aqy_D0ykg6JlDDsdxeqSqbUfZ_aMJ21GXlpWxJdDkfT45f6NhnPNfGK2bLBA3GxxSRNjXMTrmx7Z50f9YFL-E9qpic2g1Q_f3HadpmJK0zpJXgtN1-JQn3VO5I2FAw5zu3fsqUvbiS0v20UL03yuVmlX9FyXXbf9i0hJYLJ_7wa6SWXfPlj43zPrrajtw4XQAXZaJAbdbvWXkAT"/>
+</div>
+</div>
+<div class="absolute top-4 left-margin flex items-center gap-space-xs pointer-events-none">
+<span class="px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded-full text-on-surface font-label-caps text-label-caps uppercase tracking-widest shadow-sm">
+        Sostenible
+      </span>
+<span class="px-2.5 py-1 bg-surface-container-highest/80 backdrop-blur-md rounded-full text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+        Edición Limitada
+      </span>
+</div>
+<div class="absolute top-4 right-margin flex flex-col gap-space-xs">
+<button aria-label="Guardar en favoritos" class="w-10 h-10 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-on-surface flex items-center justify-center shadow-sm transition-transform active:scale-90" id="wishlistBtn">
+<span class="material-symbols-outlined text-[20px] transition-colors" id="wishlistIcon">favorite</span>
+</button>
+<button aria-label="Compartir prenda" class="w-10 h-10 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-on-surface flex items-center justify-center shadow-sm transition-transform active:scale-90" id="shareBtn">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+<div class="absolute bottom-4 inset-x-0 flex items-center justify-center gap-1.5 pointer-events-none">
+<div class="gallery-dot h-1.5 w-6 rounded-full bg-primary transition-all duration-300"></div>
+<div class="gallery-dot h-1.5 w-1.5 rounded-full bg-primary/25 transition-all duration-300"></div>
+<div class="gallery-dot h-1.5 w-1.5 rounded-full bg-primary/25 transition-all duration-300"></div>
+<div class="gallery-dot h-1.5 w-1.5 rounded-full bg-primary/25 transition-all duration-300"></div>
+</div>
+</section>
+<div class="px-margin pt-space-lg flex flex-col">
+<div class="flex items-center justify-between gap-2">
+<p class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest">
+        Colección Permanente 04
+      </p>
+<div class="flex items-center gap-1">
+<div class="flex text-secondary text-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">4.9 (34)</span>
+</div>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1">
+      Blazer Oversized Lino Crudo
+    </h2>
+<div class="flex items-baseline gap-space-sm mt-2">
+<span class="font-title-md text-title-md text-primary font-semibold">$185.00 USD</span>
+<span class="font-label-md text-label-md text-on-surface-variant">IVA incluido</span>
+</div>
+<div class="mt-2.5 px-3 py-2 rounded-lg bg-surface-container flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">payments</span>
+<p class="font-label-md text-label-md text-on-surface">
+        o 3 cuotas sin interés de <span class="font-semibold text-primary">$61.66</span> con Klarna
+      </p>
+</div>
+<div class="mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Tono:</span>
+<span class="font-body-md text-body-md text-primary font-medium" id="selectedColorLabel">Crudo Natural</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="color-opt group relative p-1 rounded-full bg-surface-container-highest transition-all duration-200 ring-2 ring-primary" data-color="Crudo Natural">
+<span class="block w-7 h-7 rounded-full bg-[#E8E2D5] shadow-inner"></span>
+</button>
+<button class="color-opt group relative p-1 rounded-full bg-transparent transition-all duration-200" data-color="Carbón Lavado">
+<span class="block w-7 h-7 rounded-full bg-[#2B2A29] shadow-inner"></span>
+</button>
+<button class="color-opt group relative p-1 rounded-full bg-transparent transition-all duration-200" data-color="Oliva Muted">
+<span class="block w-7 h-7 rounded-full bg-[#5D6352] shadow-inner"></span>
+</button>
+</div>
+</div>
+<div class="mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Talla seleccionada:</span>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" id="sizeGuideBtn">
+<span class="material-symbols-outlined text-[15px]">straighten</span>
+<span class="font-label-md text-label-md underline underline-offset-2">Guía de tallas</span>
+</button>
+</div>
+<div class="grid grid-cols-5 gap-space-xs" id="sizeGrid">
+<button class="size-btn h-11 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md flex items-center justify-center transition-all" data-size="XS">XS</button>
+<button class="size-btn h-11 rounded-lg bg-primary text-on-primary font-title-md text-title-md flex items-center justify-center transition-all" data-size="S">S</button>
+<button class="size-btn h-11 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md flex items-center justify-center transition-all" data-size="M">M</button>
+<button class="size-btn h-11 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md flex items-center justify-center transition-all" data-size="L">L</button>
+<button class="size-btn h-11 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md flex items-center justify-center transition-all" data-size="XL">XL</button>
+</div>
+<div class="mt-space-sm px-3 py-2 rounded-lg bg-surface-container-high/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[17px]">check_circle</span>
+<p class="font-label-md text-label-md text-on-surface">
+          Basado en tus preferencias: <strong class="font-semibold">Tu talla habitual es S</strong> (Corte relajado).
+        </p>
+</div>
+</div>
+<div class="mt-space-xl flex flex-col gap-space-xs">
+<div class="accordion-item rounded-xl bg-surface-container-low overflow-hidden transition-colors">
+<button class="accordion-trigger w-full px-4 py-3.5 flex items-center justify-between text-left">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[19px]">texture</span>
+<span class="font-title-md text-title-md text-primary">Detalles y Composición</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-4 pb-4 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            100% Lino cultivado en Normandía certificado por European Flax®. Tratamiento especial con lavado a la piedra para una caída suave y peso sutilmente fluido de 260g/m². Botones orgánicos de corozo cosechado de forma silvestre.
+          </p>
+<div class="mt-3 flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-caps text-label-caps uppercase">Gramaje 260g</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-caps text-label-caps uppercase">Fibra Natural</span>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-caps text-label-caps uppercase">Sin Plásticos</span>
+</div>
+</div>
+</div>
+<div class="accordion-item rounded-xl bg-surface-container-low overflow-hidden transition-colors">
+<button class="accordion-trigger w-full px-4 py-3.5 flex items-center justify-between text-left">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[19px]">dry_cleaning</span>
+<span class="font-title-md text-title-md text-primary">Guía de Cuidados</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-4 pb-4 hidden">
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-1.5 leading-relaxed">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Lavado a mano con agua fría o ciclo ultradelicado en bolsa protectora.
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Secado plano a la sombra; evitar centrifugado agresivo.
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Planchar a vapor medio mientras la prenda conserva ligera humedad.
+            </li>
+</ul>
+</div>
+</div>
+<div class="accordion-item rounded-xl bg-surface-container-low overflow-hidden transition-colors">
+<button class="accordion-trigger w-full px-4 py-3.5 flex items-center justify-between text-left">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[19px]">local_shipping</span>
+<span class="font-title-md text-title-md text-primary">Envíos y Devoluciones sin costo</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-4 pb-4 hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Envío exprés gratuito en 48-72 horas con mensajería climáticamente neutra. Dispones de 30 días naturales para cambios de talla o devoluciones íntegras sin costo adicional mediante recolección domiciliaria.
+          </p>
+</div>
+</div>
+</div>
+<div class="mt-space-xl p-space-md rounded-xl bg-surface-container flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-[24px]">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary">Garantía Atelier Craft</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Cada prenda incluye costuras reforzadas y un botón de repuesto con hilo encerado a juego.</p>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl shadow-[0_-8px_30px_rgba(25,24,23,0.08)] pb-safe">
+<div class="px-margin py-3 flex items-center justify-between gap-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Total</span>
+<span class="font-headline-md text-headline-md text-primary">$185.00</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container rounded-lg px-2 py-1">
+<button aria-label="Disminuir" class="w-7 h-7 flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-90" id="qtyMinus">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="w-5 text-center font-title-md text-title-md text-primary font-semibold" id="qtyVal">1</span>
+<button aria-label="Aumentar" class="w-7 h-7 flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-90" id="qtyPlus">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<button class="flex-1 h-12 rounded-lg bg-primary text-on-primary font-title-md text-title-md font-medium flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.985]" id="addToBagBtn">
+<span class="material-symbols-outlined text-[19px]">shopping_bag</span>
+<span>Añadir a la Bolsa</span>
+</button>
+</div>
+</div>
+<div class="fixed top-20 inset-x-margin z-50 pointer-events-none transform -translate-y-6 opacity-0 transition-all duration-300 flex justify-center" id="toastNotification">
+<div class="bg-primary text-on-primary px-4 py-3 rounded-lg shadow-xl flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md tracking-wide" id="toastMsg">Añadido a tu bolsa con éxito</span>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const gallery = document.getElementById('galleryTrack');
+    const dots = document.querySelectorAll('.gallery-dot');
+    if (gallery && dots.length > 0) {
+      gallery.addEventListener('scroll', () => {
+        const slideWidth = gallery.clientWidth;
+        if (slideWidth > 0) {
+          const index = Math.round(gallery.scrollLeft / slideWidth);
+          dots.forEach((dot, idx) => {
+            if (idx === index) {
+              dot.classList.remove('w-1.5', 'bg-primary/25');
+              dot.classList.add('w-6', 'bg-primary');
+            } else {
+              dot.classList.add('w-1.5', 'bg-primary/25');
+              dot.classList.remove('w-6', 'bg-primary');
+            }
+          });
+        }
+      });
+    }
+
+    const wishlistBtn = document.getElementById('wishlistBtn');
+    const wishlistIcon = document.getElementById('wishlistIcon');
+    let isFav = false;
+    if (wishlistBtn && wishlistIcon) {
+      wishlistBtn.addEventListener('click', () => {
+        isFav = !isFav;
+        if (isFav) {
+          wishlistIcon.style.fontVariationSettings = "'FILL' 1";
+          wishlistIcon.classList.add('text-secondary');
+          showToast('Guardado en tus favoritos de Atelier');
+        } else {
+          wishlistIcon.style.fontVariationSettings = "'FILL' 0";
+          wishlistIcon.classList.remove('text-secondary');
+        }
+      });
+    }
+
+    const colorBtns = document.querySelectorAll('.color-opt');
+    const colorLabel = document.getElementById('selectedColorLabel');
+    colorBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        colorBtns.forEach(b => {
+          b.classList.remove('ring-2', 'ring-primary', 'bg-surface-container-highest');
+          b.classList.add('bg-transparent');
+        });
+        btn.classList.add('ring-2', 'ring-primary', 'bg-surface-container-highest');
+        btn.classList.remove('bg-transparent');
+        if (colorLabel) {
+          colorLabel.textContent = btn.getAttribute('data-color') || '';
+        }
+      });
+    });
+
+    const sizeBtns = document.querySelectorAll('.size-btn');
+    sizeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sizeBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container-low', 'text-on-surface');
+        });
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+        btn.classList.add('bg-primary', 'text-on-primary');
+      });
+    });
+
+    const accordions = document.querySelectorAll('.accordion-item');
+    accordions.forEach(item => {
+      const trigger = item.querySelector('.accordion-trigger');
+      const content = item.querySelector('.accordion-content');
+      const icon = item.querySelector('.accordion-icon');
+      if (trigger && content && icon) {
+        trigger.addEventListener('click', () => {
+          const isOpen = !content.classList.contains('hidden');
+          accordions.forEach(other => {
+            other.querySelector('.accordion-content')?.classList.add('hidden');
+            const otherIcon = other.querySelector('.accordion-icon');
+            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+          });
+          if (!isOpen) {
+            content.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      }
+    });
+
+    let quantity = 1;
+    const qtyVal = document.getElementById('qtyVal');
+    const qtyPlus = document.getElementById('qtyPlus');
+    const qtyMinus = document.getElementById('qtyMinus');
+
+    if (qtyPlus && qtyMinus && qtyVal) {
+      qtyPlus.addEventListener('click', () => {
+        if (quantity < 10) {
+          quantity++;
+          qtyVal.textContent = quantity.toString();
+        }
+      });
+      qtyMinus.addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity--;
+          qtyVal.textContent = quantity.toString();
+        }
+      });
+    }
+
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMsg');
+    let toastTimeout;
+    function showToast(msg) {
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('-translate-y-6', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('-translate-y-6', 'opacity-0');
+      }, 2600);
+    }
+
+    const addBtn = document.getElementById('addToBagBtn');
+    if (addBtn) {
+      addBtn.addEventListener('click', () => {
+        showToast('Blazer añadido a tu bolsa (' + quantity + ' ud.)');
+      });
+    }
+
+    const shareBtn = document.getElementById('shareBtn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', () => {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Blazer Oversized Lino Crudo - Atelier',
+            text: 'Descubre esta pieza artesanal en Atelier Studio',
+            url: window.location.href
+          }).catch(() => {});
+        } else {
+          showToast('Enlace de la prenda copiado al portapapeles');
+        }
+      });
+    }
+
+    const sizeGuideBtn = document.getElementById('sizeGuideBtn');
+    if (sizeGuideBtn) {
+      sizeGuideBtn.addEventListener('click', () => {
+        showToast('Guía: S es ideal para pecho de 88-94cm y caída holgada');
+      });
+    }
+  })();
+</script></main></body></html>

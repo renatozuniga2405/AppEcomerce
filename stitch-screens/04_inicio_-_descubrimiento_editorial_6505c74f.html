@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'on-tertiary-fixed': '#171e0e', 'on-primary': '#ffffff', 'tertiary-container': '#171e0e', 'on-secondary-fixed': '#3f0401', 'tertiary': '#000000', 'on-tertiary': '#ffffff', 'surface-tint': '#605e5c', 'surface-container-highest': '#e3e2e0', 'inverse-surface': '#2f312f', 'on-primary-container': '#868382', 'surface-bright': '#faf9f6', 'secondary-fixed': '#ffdad4', 'surface-container': '#efeeeb', 'on-surface-variant': '#4a4640', 'on-secondary-fixed-variant': '#7a2f22', 'background': '#faf9f6', 'error': '#ba1a1a', 'error-container': '#ffdad6', 'on-surface': '#1a1c1a', 'tertiary-fixed-dim': '#c1cab1', 'surface': '#faf9f6', 'surface-variant': '#e3e2e0', 'inverse-primary': '#cac6c4', 'on-secondary': '#ffffff', 'primary-container': '#1c1b1a', 'on-tertiary-fixed-variant': '#424936', 'inverse-on-surface': '#f2f1ee', 'on-primary-fixed-variant': '#484645', 'primary-fixed-dim': '#cac6c4', 'outline': '#7b766f', 'on-background': '#1a1c1a', 'primary': '#000000', 'on-primary-fixed': '#1c1b1a', 'secondary-fixed-dim': '#ffb4a6', 'on-error-container': '#93000a', 'surface-container-low': '#f4f3f0', 'on-error': '#ffffff', 'primary-fixed': '#e6e2df', 'secondary': '#984537', 'surface-container-high': '#e9e8e5', 'outline-variant': '#ccc5bd', 'on-secondary-container': '#782d21', 'surface-dim': '#dbdad7', 'tertiary-fixed': '#dee6cc', 'secondary-container': '#ff9784', 'surface-container-lowest': '#ffffff', 'on-tertiary-container': '#7f8770' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'space-xl': '2.5rem', 'space-lg': '1.5rem', 'space-xs': '0.25rem', 'margin-desktop': '3rem', 'gutter-desktop': '2rem', 'gutter': '1rem', 'space-md': '1rem', 'space-sm': '0.5rem', 'margin': '1.25rem' }, fontFamily: { 'headline-lg': ['Playfair Display'], 'label-md': ['Plus Jakarta Sans'], 'title-md': ['Plus Jakarta Sans'], 'body-md': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Playfair Display'], 'display-lg': ['Playfair Display'], 'label-caps': ['Plus Jakarta Sans'], 'display-lg-mobile': ['Playfair Display'], 'headline-md': ['Playfair Display'] }, fontSize: { 'headline-lg': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '400' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'title-md': ['16px', { lineHeight: '22px', letterSpacing: '-0.01em', fontWeight: '600' }], 'body-md': ['13px', { lineHeight: '20px', fontWeight: '400' }], 'body-lg': ['15px', { lineHeight: '24px', fontWeight: '400' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '400' }], 'display-lg': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '400' }], 'label-caps': ['10px', { lineHeight: '14px', letterSpacing: '0.12em', fontWeight: '700' }], 'display-lg-mobile': ['34px', { lineHeight: '42px', letterSpacing: '-0.01em', fontWeight: '400' }], 'headline-md': ['22px', { lineHeight: '28px', fontWeight: '500' }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="ATELIER Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WGvD3s2nHdpc6nOeUNLLZWwcvL7WXRB8AALbA8u8_jEnCwwuSz_aRqCdFrfwAwZ0OqW6GIRE1twwhC3aYCgFxeZTKgnldRZ14dtvaJKN4etFJ7C3qxSbSklluz1jM53pSD9XtxXO5_KLgqmQcc2qSyi63CNiG0FhRZO_NGkixC4x183vRKwyWh6ZjR5QzXAfCyVXS2gVw_7azuLDXsIDdQmLVqIa3n8dnPZalDjRQw6KL1r_DudbjoPH4"/><span class="font-headline-md text-headline-md tracking-widest text-primary">ATELIER</span></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Perfil" class="relative w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioxLIxW2WNHq967ifQzaHzCB9JWCLIdTSgooO7SxHqAFBvTqP88g9M0PEm8IAtsDvULUSvaZ3rkepxpHrhHnRPxh5tgK1mEksvPxXq1o7Ve0ZllkEMZowzha1jRSijiwhpfd967H41vGIlKZp-RZY3ZJppe1p33AuQvN1_w2Wxb_H3lZPXtaSFNp-wW9Gmk5G9ryUinNUB5LVKZOPl6-jBEggx7PkskJ1ANsyLKx6c6RrYyikm-Ja"/><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-background"><div class="flex flex-col w-full">
+<!-- 1. Hero Editorial -->
+<section class="relative w-full px-margin pb-space-lg">
+<div class="relative w-full rounded-xl overflow-hidden aspect-[4/5] bg-surface-container shadow-md">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Minimalist high fashion editorial shoot of a muse in draped neutral ecru tailoring, standing in a sun-drenched brutalist limestone gallery with soft shadows, quiet luxury aesthetic, earth tones and warm cream hues, cinematic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIgWohSci_vafaLlHPRtwF6DO6jFPCwXx7k-4A1qFgu3xot4_pomDmFsz3mJduSTkfSv60NV2oFibIfG4ZXQwHVKSZ8ACpKsvkhobnPJU0ePlpkBbgTeZcykKk63y4x2uYlrXtbLfr4M6N01OWzctYIuDBeXa8vf0IYHLyd8lekZhLU6lDNhLIgbR4YkbGt3MRSj_iFiTGWqugP1gB_XUoGQpLVIGg4HE9kcE1claQJ3J-4OgHyyiy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent flex flex-col justify-end p-margin">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed mb-space-xs">
+          Edición Limitada • 2025
+        </span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-primary mb-space-xs leading-tight">
+          Verano Silencioso
+        </h2>
+<p class="font-body-md text-body-md text-surface-container-low mb-space-md opacity-90 line-clamp-2">
+          Sastrería contemporánea, siluetas fluidas y la belleza táctil de los tejidos orgánicos puros.
+        </p>
+<div>
+<button class="inline-flex items-center gap-space-xs bg-surface-container-lowest text-primary px-space-md py-space-sm rounded-lg font-label-md text-label-md tracking-wider uppercase transition-all duration-200 active:scale-95 shadow-sm" type="button">
+<span>Explorar Colección</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Carrusel horizontal de categorías destacadas -->
+<section class="w-full pb-space-lg">
+<div class="flex items-center justify-between px-margin mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Explorar Categorías</span>
+<span class="font-label-caps text-label-caps text-secondary font-semibold">Ver Todo</span>
+</div>
+<div class="flex items-center gap-space-md overflow-x-auto px-margin py-space-xs no-scrollbar">
+<!-- Cat 1 -->
+<button class="flex flex-col items-center gap-space-xs shrink-0 group focus:outline-none" type="button">
+<div class="relative w-16 h-16 rounded-full overflow-hidden bg-surface-container-high shadow-sm transition-all duration-300 group-active:scale-95">
+<img class="w-full h-full object-cover" data-alt="Detail of pure white folded linen textiles with soft architectural morning lighting, minimal studio aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAylxo5u0GeU5lT_WmU4ndzW0oixNg-QqosRHhwmXTt30z2yOyO1VGVfqn5Etz73VIOdGrYXGp1a9OxgWZenTck5ynDvc-rWtW0KgmNZTbHpgaEcPzBDJAVozEx0F3MjCHCzySKUTe2uVSaBlbpIAY5r6A4bna1MMz-Utx_o6RADRQ_tlslwR7CUsMw7NSlqshOnMhctz4IKIRsnoYz1Pvvqk5yC7Ckdq-0SfL-XzAAUPrTXkO_lVne"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-tight">Novedades</span>
+</button>
+<!-- Cat 2 -->
+<button class="flex flex-col items-center gap-space-xs shrink-0 group focus:outline-none" type="button">
+<div class="relative w-16 h-16 rounded-full overflow-hidden bg-surface-container-high shadow-sm transition-all duration-300 group-active:scale-95">
+<img class="w-full h-full object-cover" data-alt="Editorial close up on tailored wool and linen blazer lapel with clean stitching and sculptural drape, neutral ivory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5-KRAcVb1hnXq5bAJ5eIO3RXVaLY-An5-7KN_xF8gBzlsj9A294ZmMYm4xAHvuVBciJxV0jFnZELkp1FJzR-MT7mlgWqQ3v5ipYOedaCUYraLZsK7E1foL0Aa9dTlaD3Gs4mXmfYOnAKxHXolTu78WCkrxzZYw0qeXJ93EeOxHZuOy2DT5l1fWAR5Hv8YMwCrN_839PVBQd0rWIwVfOjd0z7wZ3JpfyPl-nT1V2VfPHi1089pR40O"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface tracking-tight">Sastrería</span>
+</button>
+<!-- Cat 3 -->
+<button class="flex flex-col items-center gap-space-xs shrink-0 group focus:outline-none" type="button">
+<div class="relative w-16 h-16 rounded-full overflow-hidden bg-surface-container-high shadow-sm transition-all duration-300 group-active:scale-95">
+<img class="w-full h-full object-cover" data-alt="Fluid flowing raw silk textile in sand and desert dune tones with gentle ripples in ambient daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH_ghvrLniIFgiKu00cwlgef2t4LQ3HUXp8LAnFr7DQiGlrn_2Un4-D__RrI_JlmmHxO_9Yx2-S5FRpMPUCVFbVoOuNIqINJ0qbGyav1VAHIg1ukeQMzKUAOVu1BnME8UL1FyQ2odr_PCZ5PkuhWtvIY0CRLvs2eiiiZ_fmzejhomzZVaZQ7OuP0htvCysQtwCKfI5xoIIcEtrXyyLqeWlvb_lV43MhLLijFriKGeD9GBTBiFYDC_Q"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface tracking-tight">Lino &amp; Seda</span>
+</button>
+<!-- Cat 4 -->
+<button class="flex flex-col items-center gap-space-xs shrink-0 group focus:outline-none" type="button">
+<div class="relative w-16 h-16 rounded-full overflow-hidden bg-surface-container-high shadow-sm transition-all duration-300 group-active:scale-95">
+<img class="w-full h-full object-cover" data-alt="Minimalist handmade leather flat sandals resting on warm terracotta stone plate, editorial fashion still life" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8AdGAd_yHFSDRYwQ3NtT4sqjKH7SZfR9nLM20G5KUpJ2sjjFxBmhIr07Nz_4aiH2WODnm7QfYPxdHr-xA9ujCL3R7obycbVUMG6yvWYp0b7Ry7jWLuth8vEjQLateu53WrhYkGkNEzyTZPo3SphMBRzKD5d_JDUWYugZHazCbIMbuE5xVW0tC6RNTTvSxCS_o4BzbGF9aySl-E9FR-uHMPm89kCSo74SxcJ5x3mJBBtyYm0XJaHN-"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface tracking-tight">Calzado</span>
+</button>
+<!-- Cat 5 -->
+<button class="flex flex-col items-center gap-space-xs shrink-0 group focus:outline-none" type="button">
+<div class="relative w-16 h-16 rounded-full overflow-hidden bg-surface-container-high shadow-sm transition-all duration-300 group-active:scale-95">
+<img class="w-full h-full object-cover" data-alt="Organic sculptured brass jewellery and sculpted mini pouch on warm travertine marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi_k7usLmZTCZ9ROokaCzZ_VisVH4Pluf3GcfNUlQsx1UOa2HiczbULGOKUxRQO61Tpg-dcseOCBMueCTF26URTt100cii5ihOqFzkvUQ250X5CCp2mic1BC7oqeuvHm9s7pohZpXOfq00jzIAaTDNtrRyfItuTHusfgurjKftonnSUIST1PvbAiepjmVGnIxX4CXbtxSNNiaKcvh_vhmrXD94D0ZdDOHiw40l4mZmVUlJ9BfBHjw1"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant group-hover:text-on-surface tracking-tight">Accesorios</span>
+</button>
+</div>
+</section>
+<!-- 3. Sección Piezas Icónicas (Asymmetric Grid) -->
+<section class="px-margin pb-space-xl">
+<div class="flex items-end justify-between mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary block mb-1">Selección Esencial</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Piezas Icónicas</h3>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">4 modelos</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Item 1 -->
+<article class="flex flex-col w-full group">
+<div class="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-surface-container shadow-sm mb-space-xs">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Full portrait of model wearing raw cream oversized linen blazer against neutral warm studio background, elegant drape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB6Vs2s46ouAdrwWMXUNpCP1xq1syZT_bD_xMM6saiao6AP4LNoqc72HFHMZqBt2yHKzw3F1kYfWJkOZTqQljiG_qwNrI3UbSjTRvDJNJEdSWuVLqRdlxT1C75aOjnwhzAhZnzHnIGRHVw_f9vKM5cj0yO408yar4AOjSqO6t49bD5b4CTyDnkqsMkRZFW5U3JjFEH4cISwzuLYXTNpNGoDLpSH_kKFysoRU3dXdmrLzAlv3UA6oB1"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded text-on-surface font-label-caps text-[9px] uppercase tracking-wider font-semibold">
+            Nuevo
+          </span>
+<button aria-label="Añadir a guardados" class="heart-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface transition-colors shadow-sm active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Atelier Studio</span>
+<h4 class="font-title-md text-title-md text-on-surface truncate">Blazer Oversized</h4>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">$185 USD</span>
+</div>
+</article>
+<!-- Item 2 (Staggered offset) -->
+<article class="flex flex-col w-full group pt-space-md">
+<div class="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-surface-container shadow-sm mb-space-xs">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close-up fashion photo of model wearing relaxed pleated trousers in sienna terracotta tone, soft drapery folds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB6Txxf2ChALbdqzxolDuF1WYo0BFQfH1kjTGmfQcsWHg4F4C9jSUj1jd9AOWhJfGvrppAXqmpoGxtB96i6Qma0LKJddKEfb1u-MlY6AStUtrRmfuvltdUl9ZBPJ55yZzo4qMxPZRd_sy0aXEXRpFxZdoPbRmWNh4sMlDYEGaQ-JLzTdvOxE3COhAWFDnhjvjq9XkE92NSxe_4AL7m9-2xftLRq3jhs1sgF1GAqbIdAsRs3zpct1AL"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded text-on-surface font-label-caps text-[9px] uppercase tracking-wider font-semibold">
+            Nuevo
+          </span>
+<button aria-label="Añadir a guardados" class="heart-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface transition-colors shadow-sm active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Atelier Studio</span>
+<h4 class="font-title-md text-title-md text-on-surface truncate">Pantalón Sienna</h4>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">$130 USD</span>
+</div>
+</article>
+<!-- Item 3 -->
+<article class="flex flex-col w-full group">
+<div class="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-surface-container shadow-sm mb-space-xs">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Editorial side profile of a backless midi sand silk dress with delicate tie strings, soft daylight lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-UrzfmnBdIwk7QULEQ1GjaJX14HSgG3Sew5YS0nDZsow1HnIuCVWbFszjz9Iro5BPxI4MqWaTM2mJziDpPq3Vpzn0OLvxGCjhZdFcmX-4ahq8mFl4P4kOj0zkmw2u2PSPF8kNEbqhkYNNt3KcgwFjYGSvFtWN1EmRPheskWniupDRH5IG1z3_Yu5P4Mrp3PGkXQEivRzS5KYT_ziv3KLNTnXTaD1m0hNNaLIGII2mjn-LLwI4krbb"/>
+<span class="absolute top-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded text-on-surface font-label-caps text-[9px] uppercase tracking-wider font-semibold">
+            Nuevo
+          </span>
+<button aria-label="Añadir a guardados" class="heart-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface transition-colors shadow-sm active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Atelier Studio</span>
+<h4 class="font-title-md text-title-md text-on-surface truncate">Vestido Midi Seda</h4>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">$210 USD</span>
+</div>
+</article>
+<!-- Item 4 (Staggered offset) -->
+<article class="flex flex-col w-full group pt-space-md">
+<div class="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-surface-container shadow-sm mb-space-xs">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Still life photo of an architectural structured minimalist leather tote bag in warm umber sitting on smooth travertine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA58nPND4rZMuwmlpXi7rA45c1yVGz4zok8SBCAMq-qrKOkaMtSUz9QOrFDb1tHPWsZU4F3S95s36mdosyaLK0I8tx5wh-jBZY0YXZY4KFKCw6WhE0xsIRHxI6RrvcuEtLSvcmXBzXFjHSGFgAqEaNWLIcpbsdNMAg35FBs_s3ZNiKlWW5CpK6nz0vOuoeUxWrk8jPCgY-LgwPN8a0T09N1qNjMEziuPVnuWaDys6NpKbmElQ2PrPhZ"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary px-2 py-0.5 rounded font-label-caps text-[9px] uppercase tracking-wider font-semibold">
+            Exclusivo
+          </span>
+<button aria-label="Añadir a guardados" class="heart-toggle absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface transition-colors shadow-sm active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Atelier Studio</span>
+<h4 class="font-title-md text-title-md text-on-surface truncate">Tote Estructurado</h4>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5">$295 USD</span>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. Banner Cápsula 'Edición Limitada en Seda' -->
+<section class="px-margin pb-space-xl">
+<div class="relative w-full rounded-xl bg-surface-container-high p-space-md shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="inline-flex items-center gap-1.5 bg-secondary-fixed text-on-secondary-fixed px-2 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Cápsula Exclusiva</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-semibold">Solo 30 unidades</span>
+</div>
+<div class="my-space-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Edición Limitada en Seda</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Tejidos hilados en telar artesanal, teñidos con pigmentos minerales orgánicos en tiradas numeradas.
+        </p>
+</div>
+<div class="mt-space-md flex items-center justify-between pt-space-xs">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="inline-block h-7 w-7 rounded-full bg-surface-container-highest shadow-sm">
+<img class="h-full w-full object-cover rounded-full" data-alt="Model studio avatar in ecru head wrap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCugUrjivpW5oDclKu_tCOsuN4p-50cqvWk66jWOFGfmvvUzBOYPnpHPIf43NQIq8T4P6hyZZmZS5m6-dMD9xjzJGlGel1QYMghLFVydelYYOeWfVvrWoA8DZMUV9xGNNQB69dmp3-Uv__RPpFiaQM_s5qxwG1w42ncMVS2NDQviHQQUiqnKzKo6ZfrqSrM5UVD9vbAFuou2uzEQBzvjoRpOFJrTf6sAxu4chvFw9cBbsmHxIq5fVso"/>
+</div>
+<div class="inline-block h-7 w-7 rounded-full bg-surface-container shadow-sm">
+<img class="h-full w-full object-cover rounded-full" data-alt="Model studio profile portrait in beige clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh6jWepBUIQ8_eHgBfgmqRTOPBKQ4MHT0zyRVIIFXTAwOZtxzaOD5oqdUvF6_gGZefPYPgCgNpBHwxDxxE28Yxp09GSrI-EHDYorine0zdptc-oS2KXcBsHC3akAI3wdmvkIR07wh7rP1tw2qlbDL0uRkHXUDuzk6-c6g_s81IQ0iznvgu6zyYaFkrKa_rXRbm4d4UevvaGHXrZQofAEKunMzGGcudLZ5HyxGgf_hVSgDRBhBL53Bi"/>
+</div>
+<div class="inline-block h-7 w-7 rounded-full bg-surface-container-low flex items-center justify-center font-label-caps text-[9px] text-on-surface-variant font-bold shadow-sm">
+            +18
+          </div>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider px-space-md py-space-sm rounded-lg active:scale-95 transition-transform duration-150 shadow-sm" type="button">
+          Ver Cápsula
+        </button>
+</div>
+</div>
+</section>
+<!-- 5. Sección 'Editorial Journal' -->
+<section class="px-margin pb-space-lg">
+<div class="w-full bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-space-md bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Editorial fashion photography of artisanal textile weaver hands working on a traditional wood loom with natural raw silk threads, soft warm directional sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtFQxjBcqZ_y3_RKP6yi8lvWUW6Ac_iyqBeulV6VYwiMDl1In59xE7dUz3Gf0hBeRAFNMr_UrHPqxmyRlw7HQ1m19dPAA5jG4KynAvJv02AVgcLqQwDPsooBhiJblznOGgnUoHkw6pwAzuhWQoXEN8UmktUnKgBi7b2VX0MFBNW4WTiqQ6S-AROf9zxZ1bikPsQtO6l8fjOyemNZ9hP70IXqtDkOkNBCXcXdppB1wL0hOdyIz-qWck"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded font-label-caps text-label-caps text-on-surface">
+          Journal No. 04
+        </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary mb-1">Manifiesto Atelier</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">El arte de vestir con calma</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md line-clamp-3 leading-relaxed">
+          En un mundo acelerado por tendencias efímeras, diseñamos para la permanencia. Cada costura respeta el cuerpo humano, cada fibra celebra su origen natural y cada prenda se convierte en una extensión serena de tu propia presencia.
+        </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface font-semibold tracking-wide uppercase group" href="#">
+<span>Leer Ensayo Completo</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-1">north_east</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Script for client-side delight interactions -->
+<script>
+    document.querySelectorAll('.heart-toggle').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+        if (isFilled) {
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.remove('text-secondary');
+          btn.classList.add('text-on-surface');
+        } else {
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.remove('text-on-surface');
+          btn.classList.add('text-secondary');
+        }
+      });
+    });
+  </script>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-gutter"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 transition-colors text-primary font-semibold" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Inicio</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Catálogo</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="guardados" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="font-label-caps text-label-caps uppercase tracking-wider">Guardados</span></a><a class="relative flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant transition-colors" data-path="carrito" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-2 bg-secondary text-on-secondary font-label-caps text-[9px] w-4 h-4 rounded-full flex items-center justify-center leading-none font-bold">2</span></div><span class="font-label-caps text-label-caps uppercase tracking-wider">Carrito</span></a></div></nav></body></html>

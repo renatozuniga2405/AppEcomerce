@@ -1,0 +1,120 @@
+---
+interface Props {
+  currentPath?: string;
+}
+const { currentPath = '/' } = Astro.props;
+---
+
+<header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe transition-all duration-300">
+  <div class="max-w-6xl mx-auto h-16 px-margin flex items-center justify-between">
+    <!-- Logo & Brand -->
+    <a href="/" class="flex items-center gap-space-sm group focus:outline-none" aria-label="Ir a Inicio ATELIER">
+      <div class="h-8 w-auto flex items-center">
+        <!-- SVG Vector Logo extracted from Stitch -->
+        <svg class="h-7 w-auto text-primary" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 90L75 25H85L120 90H106L97 73H63L54 90H40ZM68 62H92L80 39L68 62Z" fill="currentColor"/>
+          <path d="M125 36H165V47H149V90H136V47H125V36Z" fill="currentColor"/>
+          <path d="M175 36H215V47H189V58H210V69H189V79H215V90H175V36Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <span class="font-headline-md text-headline-md tracking-widest text-primary font-serif">ATELIER</span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-space-lg">
+      <a
+        href="/"
+        class={`font-label-md text-label-md uppercase tracking-wider transition-colors ${currentPath === '/' ? 'text-primary font-semibold border-b border-primary' : 'text-on-surface-variant hover:text-primary'}`}
+      >
+        Editorial
+      </a>
+      <a
+        href="/catalogo"
+        class={`font-label-md text-label-md uppercase tracking-wider transition-colors ${currentPath === '/catalogo' ? 'text-primary font-semibold border-b border-primary' : 'text-on-surface-variant hover:text-primary'}`}
+      >
+        Colección
+      </a>
+      <a
+        href="/catalogo?cat=Sastrería"
+        class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors"
+      >
+        Sastrería
+      </a>
+      <a
+        href="/catalogo?cat=Lino%20%26%20Seda"
+        class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors"
+      >
+        Lino & Seda
+      </a>
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="flex items-center gap-space-xs">
+      <a
+        href="/catalogo"
+        aria-label="Buscar"
+        class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors rounded-full active:scale-95"
+      >
+        <span class="material-symbols-outlined text-[22px]">search</span>
+      </a>
+
+      <!-- Shopping Bag Button with Reactive Count Badge -->
+      <a
+        href="/carrito"
+        aria-label="Bolsa de compras"
+        class="relative w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors rounded-full active:scale-95"
+      >
+        <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+        <span
+          id="cart-badge"
+          class="absolute top-1 right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-secondary text-on-secondary font-label-caps text-[10px] font-bold flex items-center justify-center transition-all duration-300 scale-100 ring-2 ring-surface"
+        >
+          1
+        </span>
+      </a>
+
+      <!-- Profile Avatar -->
+      <button
+        type="button"
+        aria-label="Perfil de usuario"
+        class="relative w-10 h-10 flex items-center justify-center pl-1"
+      >
+        <img
+          alt="Profile Avatar"
+          class="w-8 h-8 rounded-full object-cover border border-outline-variant"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioxLIxW2WNHq967ifQzaHzCB9JWCLIdTSgooO7SxHqAFBvTqP88g9M0PEm8IAtsDvULUSvaZ3rkepxpHrhHnRPxh5tgK1mEksvPxXq1o7Ve0ZllkEMZowzha1jRSijiwhpfd967H41vGIlKZp-RZY3ZJppe1p33AuQvN1_w2Wxb_H3lZPXtaSFNp-wW9Gmk5G9ryUinNUB5LVKZOPl6-jBEggx7PkskJ1ANsyLKx6c6RrYyikm-Ja"
+        />
+        <span class="absolute top-1.5 right-1 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<script>
+  import { getStoredCart, getCartTotals } from '../stores/cart';
+
+  function updateBadge() {
+    const badge = document.getElementById('cart-badge');
+    if (!badge) return;
+    const items = getStoredCart();
+    const { count } = getCartTotals(items);
+    badge.textContent = String(count);
+    if (count === 0) {
+      badge.classList.add('opacity-0', 'scale-50');
+      badge.classList.remove('opacity-100', 'scale-100');
+    } else {
+      badge.classList.remove('opacity-0', 'scale-50');
+      badge.classList.add('opacity-100', 'scale-100');
+    }
+  }
+
+  // Initial load
+  updateBadge();
+
+  // Listen to custom cart events
+  window.addEventListener('atelier:cart-updated', updateBadge);
+
+  // Re-run on Astro View Transitions navigation
+  document.addEventListener('astro:page-load', updateBadge);
+</script>
+

@@ -1,0 +1,17 @@
+# Build and dependencies
+node_modules/
+dist/
+.astro/
+
+# Environment and sensitive keys
+.env
+.env.*
+.cursor/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

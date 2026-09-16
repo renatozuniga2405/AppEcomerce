@@ -79,3 +79,4 @@ AppEcomerce/
 ## 📄 Licencia
 
 MIT © 2025 ATELIER Fashion House.
+

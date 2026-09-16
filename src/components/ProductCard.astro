@@ -11,7 +11,7 @@ const { product } = Astro.props;
 <article class="flex flex-col w-full group relative">
   <!-- Image Container with Aspect 3:4 -->
   <a
-    href={`/producto/${product.id}`}
+    href={`${import.meta.env.BASE_URL}/producto/${product.id}`}
     class="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-surface-container shadow-sm mb-space-xs block focus:outline-none focus:ring-2 focus:ring-primary/40"
     aria-label={`Ver detalles de ${product.name}`}
   >
@@ -45,7 +45,7 @@ const { product } = Astro.props;
     <span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant mb-0.5">
       {product.brand}
     </span>
-    <a href={`/producto/${product.id}`} class="hover:underline focus:outline-none">
+    <a href={`${import.meta.env.BASE_URL}/producto/${product.id}`} class="hover:underline focus:outline-none">
       <h4 class="font-title-md text-title-md text-on-surface truncate font-medium">
         {product.name}
       </h4>

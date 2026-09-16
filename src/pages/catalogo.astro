@@ -54,7 +54,7 @@ if (sortBy === 'price-asc') {
     <div class="py-space-md flex items-center gap-space-xs overflow-x-auto no-scrollbar">
       {CATEGORIES.map(cat => {
         const isActive = activeCat === cat;
-        const url = cat === 'Todas' ? '/catalogo' : `/catalogo?cat=${encodeURIComponent(cat)}`;
+        const url = cat === 'Todas' ? `${import.meta.env.BASE_URL}/catalogo` : `${import.meta.env.BASE_URL}/catalogo?cat=${encodeURIComponent(cat)}`;
         return (
           <a
             href={url}
@@ -86,7 +86,7 @@ if (sortBy === 'price-asc') {
             Actualmente no hay artículos disponibles en esta categoría. Te invitamos a explorar el catálogo completo.
           </p>
           <a
-            href="/catalogo"
+            href={`${import.meta.env.BASE_URL}/catalogo`}
             class="bg-primary text-on-primary px-6 py-2.5 rounded font-label-md uppercase text-xs tracking-wider"
           >
             Ver Colección Completa

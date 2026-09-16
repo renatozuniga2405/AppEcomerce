@@ -8,7 +8,7 @@ const { currentPath = '/' } = Astro.props;
 <header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe transition-all duration-300">
   <div class="max-w-6xl mx-auto h-16 px-margin flex items-center justify-between">
     <!-- Logo & Brand -->
-    <a href="/" class="flex items-center gap-space-sm group focus:outline-none" aria-label="Ir a Inicio ATELIER">
+    <a href={import.meta.env.BASE_URL} class="flex items-center gap-space-sm group focus:outline-none" aria-label="Ir a Inicio ATELIER">
       <div class="h-8 w-auto flex items-center">
         <!-- SVG Vector Logo extracted from Stitch -->
         <svg class="h-7 w-auto text-primary" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,25 +23,25 @@ const { currentPath = '/' } = Astro.props;
     <!-- Desktop Navigation Links -->
     <nav class="hidden md:flex items-center gap-space-lg">
       <a
-        href="/"
-        class={`font-label-md text-label-md uppercase tracking-wider transition-colors ${currentPath === '/' ? 'text-primary font-semibold border-b border-primary' : 'text-on-surface-variant hover:text-primary'}`}
+        href={import.meta.env.BASE_URL}
+        class={`font-label-md text-label-md uppercase tracking-wider transition-colors ${currentPath === import.meta.env.BASE_URL || currentPath === `${import.meta.env.BASE_URL}/` ? 'text-primary font-semibold border-b border-primary' : 'text-on-surface-variant hover:text-primary'}`}
       >
         Editorial
       </a>
       <a
-        href="/catalogo"
-        class={`font-label-md text-label-md uppercase tracking-wider transition-colors ${currentPath === '/catalogo' ? 'text-primary font-semibold border-b border-primary' : 'text-on-surface-variant hover:text-primary'}`}
+        href={`${import.meta.env.BASE_URL}/catalogo`}
+        class={`font-label-md text-label-md uppercase tracking-wider transition-colors ${currentPath.includes('/catalogo') ? 'text-primary font-semibold border-b border-primary' : 'text-on-surface-variant hover:text-primary'}`}
       >
         Colección
       </a>
       <a
-        href="/catalogo?cat=Sastrería"
+        href={`${import.meta.env.BASE_URL}/catalogo?cat=Sastrería`}
         class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors"
       >
         Sastrería
       </a>
       <a
-        href="/catalogo?cat=Lino%20%26%20Seda"
+        href={`${import.meta.env.BASE_URL}/catalogo?cat=Lino%20%26%20Seda`}
         class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors"
       >
         Lino & Seda
@@ -51,7 +51,7 @@ const { currentPath = '/' } = Astro.props;
     <!-- Right Actions -->
     <div class="flex items-center gap-space-xs">
       <a
-        href="/catalogo"
+        href={`${import.meta.env.BASE_URL}/catalogo`}
         aria-label="Buscar"
         class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors rounded-full active:scale-95"
       >
@@ -60,7 +60,7 @@ const { currentPath = '/' } = Astro.props;
 
       <!-- Shopping Bag Button with Reactive Count Badge -->
       <a
-        href="/carrito"
+        href={`${import.meta.env.BASE_URL}/carrito`}
         aria-label="Bolsa de compras"
         class="relative w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors rounded-full active:scale-95"
       >

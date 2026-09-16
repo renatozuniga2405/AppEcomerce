@@ -7,27 +7,27 @@ const featuredProducts = PRODUCTS.filter(p => p.featured);
 const categoriesWithImages = [
   {
     name: 'Novedades',
-    url: '/catalogo?cat=Novedades',
+    url: `${import.meta.env.BASE_URL}/catalogo?cat=Novedades`,
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAylxo5u0GeU5lT_WmU4ndzW0oixNg-QqosRHhwmXTt30z2yOyO1VGVfqn5Etz73VIOdGrYXGp1a9OxgWZenTck5ynDvc-rWtW0KgmNZTbHpgaEcPzBDJAVozEx0F3MjCHCzySKUTe2uVSaBlbpIAY5r6A4bna1MMz-Utx_o6RADRQ_tlslwR7CUsMw7NSlqshOnMhctz4IKIRsnoYz1Pvvqk5yC7Ckdq-0SfL-XzAAUPrTXkO_lVne'
   },
   {
     name: 'Sastrería',
-    url: '/catalogo?cat=Sastrería',
+    url: `${import.meta.env.BASE_URL}/catalogo?cat=Sastrería`,
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC5-KRAcVb1hnXq5bAJ5eIO3RXVaLY-An5-7KN_xF8gBzlsj9A294ZmMYm4xAHvuVBciJxV0jFnZELkp1FJzR-MT7mlgWqQ3v5ipYOedaCUYraLZsK7E1foL0Aa9dTlaD3Gs4mXmfYOnAKxHXolTu78WCkrxzZYw0qeXJ93EeOxHZuOy2DT5l1fWAR5Hv8YMwCrN_839PVBQd0rWIwVfOjd0z7wZ3JpfyPl-nT1V2VfPHi1089pR40O'
   },
   {
     name: 'Lino & Seda',
-    url: '/catalogo?cat=Lino%20%26%20Seda',
+    url: `${import.meta.env.BASE_URL}/catalogo?cat=Lino%20%26%20Seda`,
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBH_ghvrLniIFgiKu00cwlgef2t4LQ3HUXp8LAnFr7DQiGlrn_2Un4-D__RrI_JlmmHxO_9Yx2-S5FRpMPUCVFbVoOuNIqINJ0qbGyav1VAHIg1ukeQMzKUAOVu1BnME8UL1FyQ2odr_PCZ5PkuhWtvIY0CRLvs2eiiiZ_fmzejhomzZVaZQ7OuP0htvCysQtwCKfI5xoIIcEtrXyyLqeWlvb_lV43MhLLijFriKGeD9GBTBiFYDC_Q'
   },
   {
     name: 'Calzado',
-    url: '/catalogo?cat=Calzado',
+    url: `${import.meta.env.BASE_URL}/catalogo?cat=Calzado`,
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8AdGAd_yHFSDRYwQ3NtT4sqjKH7SZfR9nLM20G5KUpJ2sjjFxBmhIr07Nz_4aiH2WODnm7QfYPxdHr-xA9ujCL3R7obycbVUMG6yvWYp0b7Ry7jWLuth8vEjQLateu53WrhYkGkNEzyTZPo3SphMBRzKD5d_JDUWYugZHazCbIMbuE5xVW0tC6RNTTvSxCS_o4BzbGF9aySl-E9FR-uHMPm89kCSo74SxcJ5x3mJBBtyYm0XJaHN-'
   },
   {
     name: 'Accesorios',
-    url: '/catalogo?cat=Accesorios',
+    url: `${import.meta.env.BASE_URL}/catalogo?cat=Accesorios`,
     img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBi_k7usLmZTCZ9ROokaCzZ_VisVH4Pluf3GcfNUlQsx1UOa2HiczbULGOKUxRQO61Tpg-dcseOCBMueCTF26URTt100cii5ihOqFzkvUQ250X5CCp2mic1BC7oqeuvHm9s7pohZpXOfq00jzIAaTDNtrRyfItuTHusfgurjKftonnSUIST1PvbAiepjmVGnIxX4CXbtxSNNiaKcvh_vhmrXD94D0ZdDOHiw40l4mZmVUlJ9BfBHjw1'
   }
 ];
@@ -55,7 +55,7 @@ const categoriesWithImages = [
           </p>
           <div>
             <a
-              href="/catalogo"
+              href={`${import.meta.env.BASE_URL}/catalogo`}
               class="inline-flex items-center gap-space-xs bg-surface-container-lowest text-primary px-space-md py-space-sm rounded font-label-md text-label-md tracking-wider uppercase transition-all duration-200 hover:bg-white active:scale-95 shadow-sm font-semibold group"
             >
               <span>Explorar Colección</span>
@@ -72,7 +72,7 @@ const categoriesWithImages = [
         <span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant font-semibold">
           Explorar Categorías
         </span>
-        <a href="/catalogo" class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider hover:underline">
+        <a href={`${import.meta.env.BASE_URL}/catalogo`} class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider hover:underline">
           Ver Todo
         </a>
       </div>
@@ -128,7 +128,7 @@ const categoriesWithImages = [
           </p>
           <div class="pt-2">
             <a
-              href="/catalogo"
+              href={`${import.meta.env.BASE_URL}/catalogo`}
               class="inline-block border-b-2 border-primary text-primary font-label-md uppercase tracking-wider font-bold py-1 hover:border-secondary hover:text-secondary transition-colors"
             >
               Conocer nuestro proceso artesanal →
